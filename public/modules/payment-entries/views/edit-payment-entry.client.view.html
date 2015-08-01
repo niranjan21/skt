@@ -1,0 +1,137 @@
+<section data-ng-controller="PaymentEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify Payment Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/payment-entries">PaymentEntry</a>
+          </li>
+          <li class="active">
+            <strong>Modify Payment Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="journalNo">Journal No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="paymententry.journalNo" id="journalNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="journalDate">Journal Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="paymententry.journalDate" id="journalDate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="party">Party</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="paymententry.party" id="party" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="knitter">Knitter</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="paymententry.knitter" id="knitter" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="amount">Amount</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="paymententry.amount" id="amount" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="mode">Mode</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="paymententry.mode" id="mode" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="by">By</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="paymententry.by" id="by" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="number">Number</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="paymententry.number" id="number" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="paymententry.date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="drawnOn">Drawn On</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="paymententry.drawnOn" id="drawnOn" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="remarks">Remarks</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="paymententry.remarks" id="remarks" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="receivedBy">Received By</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="paymententry.receivedBy" id="receivedBy" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="preparedBy">Prepared By</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="paymententry.preparedBy" id="preparedBy" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="authorisedBy">Authorised By</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="paymententry.authorisedBy" id="authorisedBy" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,202 @@
+<section data-ng-controller="YarnReceiptEntriesController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List Yarn Receipt Entries</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List Yarn Receipt Entries</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!yarnreceiptentries.$resolved || yarnreceiptentries.length">
+    No YarnReceiptEntries yet, why don't you <a href="/#!/yarn-receipt-entries/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="yarnreceiptentries.length>0">
+    <div class="ibox-title">
+      <h5>YarnReceiptEntries ({{yarnreceiptentries.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/yarn-receipt-entries/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search yarnreceiptentry" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>Job No</th>
+              
+              <th>Job Date</th>
+              
+              <th>Party</th>
+              
+              <th>Expected Delivery Date</th>
+              
+              <th>Order</th>
+              
+              <th>Sample</th>
+              
+              <th>Order No</th>
+              
+              <th>Marketing By</th>
+              
+              <th>Knitter</th>
+              
+              <th>Design</th>
+              
+              <th>Colour</th>
+              
+              <th>Rate</th>
+              
+              <th>Party Delivery Chalan No</th>
+              
+              <th>Date</th>
+              
+              <th>Received Vehicle No</th>
+              
+              <th>Remarks</th>
+              
+              <th>Received By</th>
+              
+              <th>Prepared By</th>
+              
+              <th>Authorised By</th>
+              
+              <th>S No</th>
+              
+              <th>Yarn Description</th>
+              
+              <th>Cones</th>
+              
+              <th>Bags</th>
+              
+              <th>Net Kgs</th>
+              
+              <th>Gross Kgs</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="yarnreceiptentry in yarnreceiptentries | filter: searchtext">
+              
+                
+              <td>{{ yarnreceiptentry.jobNo }}</td>
+              
+              
+              
+              <td>{{ yarnreceiptentry.jobDate | date }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.party }}</td>
+              
+              
+              
+              <td>{{ yarnreceiptentry.expectedDeliveryDate | date }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.order }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.sample }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.orderNo }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.marketingBy }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.knitter }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.design }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.colour }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.rate }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.partyDeliveryChalanNo }}</td>
+              
+              
+              
+              <td>{{ yarnreceiptentry.date | date }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.receivedVehicleNo }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.remarks }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.receivedBy }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.preparedBy }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.authorisedBy }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.sNo }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.yarnDescription }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.cones }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.bags }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.netKgs }}</td>
+              
+              
+                
+              <td>{{ yarnreceiptentry.grossKgs }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/yarn-receipt-entries/{{yarnreceiptentry._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

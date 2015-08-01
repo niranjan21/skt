@@ -1,0 +1,62 @@
+<section data-ng-controller="JobCardsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Job Card</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/job-cards">JobCard</a>
+          </li>
+          <li class="active">
+            <strong>View Job Card</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == jobcard.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/job-cards/{{jobcard._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Job </dt><dd>{{ jobcard.job }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ jobcard.date | date }}</dd>
+              
+            
+                
+                 <dt>Is The Job Finished </dt><dd>{{ jobcard.isTheJobFinished }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ jobcard.remarks }}</dd>
+              
+            
+                
+                 <dt>Prepared By </dt><dd>{{ jobcard.preparedBy }}</dd>
+              
+            
+                
+                 <dt>Authorised By </dt><dd>{{ jobcard.authorisedBy }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

@@ -1,0 +1,106 @@
+<section data-ng-controller="FabricReturnEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Fabric Return Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/fabric-return-entries">FabricReturnEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Fabric Return Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == fabricreturnentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/fabric-return-entries/{{fabricreturnentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Delivery Chalan No </dt><dd>{{ fabricreturnentry.deliveryChalanNo }}</dd>
+              
+            
+              
+                 <dt>Delivery Chalan Date </dt><dd>{{ fabricreturnentry.deliveryChalanDate | date }}</dd>
+              
+            
+                
+                 <dt>Knitter </dt><dd>{{ fabricreturnentry.knitter }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ fabricreturnentry.jobNo }}</dd>
+              
+            
+              
+                 <dt>Job Date </dt><dd>{{ fabricreturnentry.jobDate | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ fabricreturnentry.party }}</dd>
+              
+            
+                
+                 <dt>Fabric </dt><dd>{{ fabricreturnentry.fabric }}</dd>
+              
+            
+                
+                 <dt>Gsm </dt><dd>{{ fabricreturnentry.gsm }}</dd>
+              
+            
+                
+                 <dt>Kgs </dt><dd>{{ fabricreturnentry.kgs }}</dd>
+              
+            
+                
+                 <dt>Party Delivery Chalan No </dt><dd>{{ fabricreturnentry.partyDeliveryChalanNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ fabricreturnentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ fabricreturnentry.remarks }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ fabricreturnentry.dia }}</dd>
+              
+            
+                
+                 <dt>Stock Rolls </dt><dd>{{ fabricreturnentry.stockRolls }}</dd>
+              
+            
+                
+                 <dt>Stock Kgs </dt><dd>{{ fabricreturnentry.stockKgs }}</dd>
+              
+            
+                
+                 <dt>Delivery Rolls </dt><dd>{{ fabricreturnentry.deliveryRolls }}</dd>
+              
+            
+                
+                 <dt>Delivery Kgs </dt><dd>{{ fabricreturnentry.deliveryKgs }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

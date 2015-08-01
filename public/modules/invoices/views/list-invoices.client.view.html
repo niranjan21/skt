@@ -1,0 +1,106 @@
+<section data-ng-controller="InvoicesController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List Invoices</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List Invoices</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!invoices.$resolved || invoices.length">
+    No Invoices yet, why don't you <a href="/#!/invoices/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="invoices.length>0">
+    <div class="ibox-title">
+      <h5>Invoices ({{invoices.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/invoices/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search invoice" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>Invoice No</th>
+              
+              <th>Invoice Date</th>
+              
+              <th>Knitter</th>
+              
+              <th>Job No</th>
+              
+              <th>Date</th>
+              
+              <th>Party</th>
+              
+              <th>Delivery No</th>
+              
+              <th>Delivery Date</th>
+              
+              <th>Remarks</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="invoice in invoices | filter: searchtext">
+              
+                
+              <td>{{ invoice.invoiceNo }}</td>
+              
+              
+              
+              <td>{{ invoice.invoiceDate | date }}</td>
+              
+              
+                
+              <td>{{ invoice.knitter }}</td>
+              
+              
+                
+              <td>{{ invoice.jobNo }}</td>
+              
+              
+              
+              <td>{{ invoice.date | date }}</td>
+              
+              
+                
+              <td>{{ invoice.party }}</td>
+              
+              
+                
+              <td>{{ invoice.deliveryNo }}</td>
+              
+              
+              
+              <td>{{ invoice.deliveryDate | date }}</td>
+              
+              
+                
+              <td>{{ invoice.remarks }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/invoices/{{invoice._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

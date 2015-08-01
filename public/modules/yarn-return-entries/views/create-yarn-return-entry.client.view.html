@@ -1,0 +1,172 @@
+<section data-ng-controller="YarnReturnEntriesController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Yarn Return Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/yarn-return-entries">YarnReturnEntry</a>
+          </li>
+          <li class="active">
+            <strong>New Yarn Return Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="returnDeliveryChalanNo">Return Delivery Chalan No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="returnDeliveryChalanNo" id="returnDeliveryChalanNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="returnDeliveryChalanDate">Return Delivery Chalan Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="returnDeliveryChalanDate" id="returnDeliveryChalanDate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobNo">Job No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="jobNo" id="jobNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobDate">Job Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="jobDate" id="jobDate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="knitter">Knitter</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="knitter" id="knitter" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="party">Party</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="party" id="party" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="partyDeliveryChalanNo">Party Delivery Chalan No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="partyDeliveryChalanNo" id="partyDeliveryChalanNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="vehicleNo">Vehicle No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="vehicleNo" id="vehicleNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="remarks">Remarks</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="remarks" id="remarks" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="mistakeClotheKgs">Mistake Clothe Kgs</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="mistakeClotheKgs" id="mistakeClotheKgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sNo">S No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="sNo" id="sNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="yarnDescription">Yarn Description</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="yarnDescription" id="yarnDescription" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="receivedBags">Received Bags</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="receivedBags" id="receivedBags" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="receivedWeightKgs">Received Weight Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="receivedWeightKgs" id="receivedWeightKgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="returnCones">Return Cones</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="returnCones" id="returnCones" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="returnBags">Return Bags</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="returnBags" id="returnBags" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="returnKgsNet">Return Kgs Net</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="returnKgsNet" id="returnKgsNet" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="returnKgsGross">Return Kgs Gross</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="returnKgsGross" id="returnKgsGross" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

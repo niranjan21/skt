@@ -1,0 +1,94 @@
+<section data-ng-controller="PaymentEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Payment Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/payment-entries">PaymentEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Payment Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == paymententry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/payment-entries/{{paymententry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Journal No </dt><dd>{{ paymententry.journalNo }}</dd>
+              
+            
+              
+                 <dt>Journal Date </dt><dd>{{ paymententry.journalDate | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ paymententry.party }}</dd>
+              
+            
+                
+                 <dt>Knitter </dt><dd>{{ paymententry.knitter }}</dd>
+              
+            
+                
+                 <dt>Amount </dt><dd>{{ paymententry.amount }}</dd>
+              
+            
+                
+                 <dt>Mode </dt><dd>{{ paymententry.mode }}</dd>
+              
+            
+                
+                 <dt>By </dt><dd>{{ paymententry.by }}</dd>
+              
+            
+                
+                 <dt>Number </dt><dd>{{ paymententry.number }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ paymententry.date | date }}</dd>
+              
+            
+                
+                 <dt>Drawn On </dt><dd>{{ paymententry.drawnOn }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ paymententry.remarks }}</dd>
+              
+            
+                
+                 <dt>Received By </dt><dd>{{ paymententry.receivedBy }}</dd>
+              
+            
+                
+                 <dt>Prepared By </dt><dd>{{ paymententry.preparedBy }}</dd>
+              
+            
+                
+                 <dt>Authorised By </dt><dd>{{ paymententry.authorisedBy }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

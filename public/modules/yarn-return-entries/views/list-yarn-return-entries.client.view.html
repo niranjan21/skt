@@ -1,0 +1,166 @@
+<section data-ng-controller="YarnReturnEntriesController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List Yarn Return Entries</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List Yarn Return Entries</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!yarnreturnentries.$resolved || yarnreturnentries.length">
+    No YarnReturnEntries yet, why don't you <a href="/#!/yarn-return-entries/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="yarnreturnentries.length>0">
+    <div class="ibox-title">
+      <h5>YarnReturnEntries ({{yarnreturnentries.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/yarn-return-entries/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search yarnreturnentry" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>Return Delivery Chalan No</th>
+              
+              <th>Return Delivery Chalan Date</th>
+              
+              <th>Job No</th>
+              
+              <th>Job Date</th>
+              
+              <th>Knitter</th>
+              
+              <th>Party</th>
+              
+              <th>Party Delivery Chalan No</th>
+              
+              <th>Date</th>
+              
+              <th>Vehicle No</th>
+              
+              <th>Remarks</th>
+              
+              <th>Mistake Clothe Kgs</th>
+              
+              <th>S No</th>
+              
+              <th>Yarn Description</th>
+              
+              <th>Received Bags</th>
+              
+              <th>Received Weight Kgs</th>
+              
+              <th>Return Cones</th>
+              
+              <th>Return Bags</th>
+              
+              <th>Return Kgs Net</th>
+              
+              <th>Return Kgs Gross</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="yarnreturnentry in yarnreturnentries | filter: searchtext">
+              
+                
+              <td>{{ yarnreturnentry.returnDeliveryChalanNo }}</td>
+              
+              
+              
+              <td>{{ yarnreturnentry.returnDeliveryChalanDate | date }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.jobNo }}</td>
+              
+              
+              
+              <td>{{ yarnreturnentry.jobDate | date }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.knitter }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.party }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.partyDeliveryChalanNo }}</td>
+              
+              
+              
+              <td>{{ yarnreturnentry.date | date }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.vehicleNo }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.remarks }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.mistakeClotheKgs }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.sNo }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.yarnDescription }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.receivedBags }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.receivedWeightKgs }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.returnCones }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.returnBags }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.returnKgsNet }}</td>
+              
+              
+                
+              <td>{{ yarnreturnentry.returnKgsGross }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/yarn-return-entries/{{yarnreturnentry._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

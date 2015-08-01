@@ -1,0 +1,158 @@
+<section data-ng-controller="FabricReturnEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify Fabric Return Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/fabric-return-entries">FabricReturnEntry</a>
+          </li>
+          <li class="active">
+            <strong>Modify Fabric Return Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="deliveryChalanNo">Delivery Chalan No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreturnentry.deliveryChalanNo" id="deliveryChalanNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="deliveryChalanDate">Delivery Chalan Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="fabricreturnentry.deliveryChalanDate" id="deliveryChalanDate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="knitter">Knitter</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreturnentry.knitter" id="knitter" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobNo">Job No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreturnentry.jobNo" id="jobNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobDate">Job Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="fabricreturnentry.jobDate" id="jobDate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="party">Party</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreturnentry.party" id="party" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="fabric">Fabric</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreturnentry.fabric" id="fabric" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="gsm">Gsm</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreturnentry.gsm" id="gsm" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="kgs">Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreturnentry.kgs" id="kgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="partyDeliveryChalanNo">Party Delivery Chalan No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreturnentry.partyDeliveryChalanNo" id="partyDeliveryChalanNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="fabricreturnentry.date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="remarks">Remarks</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreturnentry.remarks" id="remarks" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="dia">Dia</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreturnentry.dia" id="dia" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="stockRolls">Stock Rolls</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreturnentry.stockRolls" id="stockRolls" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="stockKgs">Stock Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreturnentry.stockKgs" id="stockKgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="deliveryRolls">Delivery Rolls</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreturnentry.deliveryRolls" id="deliveryRolls" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="deliveryKgs">Delivery Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreturnentry.deliveryKgs" id="deliveryKgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,78 @@
+<section data-ng-controller="InwardEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Inward Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/inward-entries">InwardEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Inward Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == inwardentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/inward-entries/{{inwardentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Received From </dt><dd>{{ inwardentry.receivedFrom }}</dd>
+              
+            
+                
+                 <dt>Goods Receipt No </dt><dd>{{ inwardentry.goodsReceiptNo }}</dd>
+              
+            
+              
+                 <dt>Inward Date </dt><dd>{{ inwardentry.inwardDate | date }}</dd>
+              
+            
+                
+                 <dt>Delivery Chalan No </dt><dd>{{ inwardentry.deliveryChalanNo }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ inwardentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Name Of The Item </dt><dd>{{ inwardentry.nameOfTheItem }}</dd>
+              
+            
+                
+                 <dt>U Om </dt><dd>{{ inwardentry.uOM }}</dd>
+              
+            
+                
+                 <dt>Rate </dt><dd>{{ inwardentry.rate }}</dd>
+              
+            
+                
+                 <dt>Received </dt><dd>{{ inwardentry.received }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ inwardentry.jobNo }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

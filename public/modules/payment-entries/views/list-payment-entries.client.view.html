@@ -1,0 +1,136 @@
+<section data-ng-controller="PaymentEntriesController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List Payment Entries</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List Payment Entries</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!paymententries.$resolved || paymententries.length">
+    No PaymentEntries yet, why don't you <a href="/#!/payment-entries/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="paymententries.length>0">
+    <div class="ibox-title">
+      <h5>PaymentEntries ({{paymententries.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/payment-entries/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search paymententry" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>Journal No</th>
+              
+              <th>Journal Date</th>
+              
+              <th>Party</th>
+              
+              <th>Knitter</th>
+              
+              <th>Amount</th>
+              
+              <th>Mode</th>
+              
+              <th>By</th>
+              
+              <th>Number</th>
+              
+              <th>Date</th>
+              
+              <th>Drawn On</th>
+              
+              <th>Remarks</th>
+              
+              <th>Received By</th>
+              
+              <th>Prepared By</th>
+              
+              <th>Authorised By</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="paymententry in paymententries | filter: searchtext">
+              
+                
+              <td>{{ paymententry.journalNo }}</td>
+              
+              
+              
+              <td>{{ paymententry.journalDate | date }}</td>
+              
+              
+                
+              <td>{{ paymententry.party }}</td>
+              
+              
+                
+              <td>{{ paymententry.knitter }}</td>
+              
+              
+                
+              <td>{{ paymententry.amount }}</td>
+              
+              
+                
+              <td>{{ paymententry.mode }}</td>
+              
+              
+                
+              <td>{{ paymententry.by }}</td>
+              
+              
+                
+              <td>{{ paymententry.number }}</td>
+              
+              
+              
+              <td>{{ paymententry.date | date }}</td>
+              
+              
+                
+              <td>{{ paymententry.drawnOn }}</td>
+              
+              
+                
+              <td>{{ paymententry.remarks }}</td>
+              
+              
+                
+              <td>{{ paymententry.receivedBy }}</td>
+              
+              
+                
+              <td>{{ paymententry.preparedBy }}</td>
+              
+              
+                
+              <td>{{ paymententry.authorisedBy }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/payment-entries/{{paymententry._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

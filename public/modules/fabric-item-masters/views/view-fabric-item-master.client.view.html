@@ -1,0 +1,66 @@
+<section data-ng-controller="FabricItemMastersController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Fabric Item Master</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/fabric-item-masters">FabricItemMaster</a>
+          </li>
+          <li class="active">
+            <strong>View Fabric Item Master</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == fabricitemmaster.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/fabric-item-masters/{{fabricitemmaster._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Fabric </dt><dd>{{ fabricitemmaster.fabric }}</dd>
+              
+            
+                
+                 <dt>Count </dt><dd>{{ fabricitemmaster.count }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ fabricitemmaster.dia }}</dd>
+              
+            
+                
+                 <dt>Gsm </dt><dd>{{ fabricitemmaster.gsm }}</dd>
+              
+            
+                
+                 <dt>Opening Rolls </dt><dd>{{ fabricitemmaster.openingRolls }}</dd>
+              
+            
+                
+                 <dt>Opening Kgs </dt><dd>{{ fabricitemmaster.openingKgs }}</dd>
+              
+            
+                
+                 <dt>Rate Per Kg </dt><dd>{{ fabricitemmaster.ratePerKg }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

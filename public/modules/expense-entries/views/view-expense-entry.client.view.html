@@ -1,0 +1,58 @@
+<section data-ng-controller="ExpenseEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Expenses Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/expense-entries">ExpenseEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Expenses Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == expenseentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/expense-entries/{{expenseentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+              
+                 <dt>Date </dt><dd>{{ expenseentry.date | date }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ expenseentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Particulars </dt><dd>{{ expenseentry.particulars }}</dd>
+              
+            
+                
+                 <dt>Amount </dt><dd>{{ expenseentry.amount }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ expenseentry.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

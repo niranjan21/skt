@@ -1,0 +1,94 @@
+<section data-ng-controller="DeliveryEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Delivery Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/delivery-entries">DeliveryEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Delivery Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == deliveryentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/delivery-entries/{{deliveryentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Delivery Challan No </dt><dd>{{ deliveryentry.deliveryChallanNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ deliveryentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Knitter </dt><dd>{{ deliveryentry.knitter }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ deliveryentry.jobNo }}</dd>
+              
+            
+              
+                 <dt>Job Date </dt><dd>{{ deliveryentry.jobDate | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ deliveryentry.party }}</dd>
+              
+            
+                
+                 <dt>Fabric </dt><dd>{{ deliveryentry.fabric }}</dd>
+              
+            
+                
+                 <dt>Gsm </dt><dd>{{ deliveryentry.gsm }}</dd>
+              
+            
+                
+                 <dt>Kgs </dt><dd>{{ deliveryentry.kgs }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ deliveryentry.dia }}</dd>
+              
+            
+                
+                 <dt>Stock Rolls </dt><dd>{{ deliveryentry.stockRolls }}</dd>
+              
+            
+                
+                 <dt>Stock Kgs </dt><dd>{{ deliveryentry.stockKgs }}</dd>
+              
+            
+                
+                 <dt>Delivery Rolls </dt><dd>{{ deliveryentry.deliveryRolls }}</dd>
+              
+            
+                
+                 <dt>Delivery Kgs </dt><dd>{{ deliveryentry.deliveryKgs }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

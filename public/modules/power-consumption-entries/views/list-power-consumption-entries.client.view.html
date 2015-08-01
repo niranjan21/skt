@@ -1,0 +1,76 @@
+<section data-ng-controller="PowerConsumptionEntriesController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List Power Consumption Entries</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List Power Consumption Entries</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!powerconsumptionentries.$resolved || powerconsumptionentries.length">
+    No PowerConsumptionEntries yet, why don't you <a href="/#!/power-consumption-entries/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="powerconsumptionentries.length>0">
+    <div class="ibox-title">
+      <h5>PowerConsumptionEntries ({{powerconsumptionentries.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/power-consumption-entries/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search powerconsumptionentry" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>Date</th>
+              
+              <th>Power Consumption Units</th>
+              
+              <th>Rate</th>
+              
+              <th>Remarks</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="powerconsumptionentry in powerconsumptionentries | filter: searchtext">
+              
+              
+              <td>{{ powerconsumptionentry.date | date }}</td>
+              
+              
+                
+              <td>{{ powerconsumptionentry.powerConsumptionUnits }}</td>
+              
+              
+                
+              <td>{{ powerconsumptionentry.rate }}</td>
+              
+              
+                
+              <td>{{ powerconsumptionentry.remarks }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/power-consumption-entries/{{powerconsumptionentry._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

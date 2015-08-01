@@ -1,0 +1,102 @@
+<section data-ng-controller="OutwardEntriesController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Outward Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/outward-entries">OutwardEntry</a>
+          </li>
+          <li class="active">
+            <strong>New Outward Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="deliveryTo">Delivery To</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="deliveryTo" id="deliveryTo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="deliveryChalanNo">Delivery Chalan No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="deliveryChalanNo" id="deliveryChalanNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="receiver">Receiver</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="receiver" id="receiver" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sNo">S No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="sNo" id="sNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="nameOfTheItem">Name Of The Item</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="nameOfTheItem" id="nameOfTheItem" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="uOm">U Om</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="uOm" id="uOm" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="issued">Issued</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="issued" id="issued" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobNo">Job No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="jobNo" id="jobNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

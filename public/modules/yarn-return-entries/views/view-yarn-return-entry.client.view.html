@@ -1,0 +1,114 @@
+<section data-ng-controller="YarnReturnEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Yarn Return Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/yarn-return-entries">YarnReturnEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Yarn Return Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == yarnreturnentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/yarn-return-entries/{{yarnreturnentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Return Delivery Chalan No </dt><dd>{{ yarnreturnentry.returnDeliveryChalanNo }}</dd>
+              
+            
+              
+                 <dt>Return Delivery Chalan Date </dt><dd>{{ yarnreturnentry.returnDeliveryChalanDate | date }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ yarnreturnentry.jobNo }}</dd>
+              
+            
+              
+                 <dt>Job Date </dt><dd>{{ yarnreturnentry.jobDate | date }}</dd>
+              
+            
+                
+                 <dt>Knitter </dt><dd>{{ yarnreturnentry.knitter }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ yarnreturnentry.party }}</dd>
+              
+            
+                
+                 <dt>Party Delivery Chalan No </dt><dd>{{ yarnreturnentry.partyDeliveryChalanNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ yarnreturnentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Vehicle No </dt><dd>{{ yarnreturnentry.vehicleNo }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ yarnreturnentry.remarks }}</dd>
+              
+            
+                
+                 <dt>Mistake Clothe Kgs </dt><dd>{{ yarnreturnentry.mistakeClotheKgs }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ yarnreturnentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Yarn Description </dt><dd>{{ yarnreturnentry.yarnDescription }}</dd>
+              
+            
+                
+                 <dt>Received Bags </dt><dd>{{ yarnreturnentry.receivedBags }}</dd>
+              
+            
+                
+                 <dt>Received Weight Kgs </dt><dd>{{ yarnreturnentry.receivedWeightKgs }}</dd>
+              
+            
+                
+                 <dt>Return Cones </dt><dd>{{ yarnreturnentry.returnCones }}</dd>
+              
+            
+                
+                 <dt>Return Bags </dt><dd>{{ yarnreturnentry.returnBags }}</dd>
+              
+            
+                
+                 <dt>Return Kgs Net </dt><dd>{{ yarnreturnentry.returnKgsNet }}</dd>
+              
+            
+                
+                 <dt>Return Kgs Gross </dt><dd>{{ yarnreturnentry.returnKgsGross }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

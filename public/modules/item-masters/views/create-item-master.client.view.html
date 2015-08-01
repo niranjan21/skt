@@ -1,0 +1,81 @@
+<section data-ng-controller="ItemMastersController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Item Master</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/item-masters">ItemMaster</a>
+          </li>
+          <li class="active">
+            <strong>New Item Master</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="itemCode">Item Code</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="itemCode" id="itemCode" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="nameOfTheItem">Name Of The Item</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="nameOfTheItem" id="nameOfTheItem" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="uOm">U Om</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="uOm" id="uOm" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="unitRate">Unit Rate</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="unitRate" id="unitRate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="openingBalance">Opening Balance</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="openingBalance" id="openingBalance" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="type">Type</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="type" id="type" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

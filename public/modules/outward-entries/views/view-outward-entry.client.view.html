@@ -1,0 +1,74 @@
+<section data-ng-controller="OutwardEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Outward Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/outward-entries">OutwardEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Outward Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == outwardentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/outward-entries/{{outwardentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Delivery To </dt><dd>{{ outwardentry.deliveryTo }}</dd>
+              
+            
+                
+                 <dt>Delivery Chalan No </dt><dd>{{ outwardentry.deliveryChalanNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ outwardentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Receiver </dt><dd>{{ outwardentry.receiver }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ outwardentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Name Of The Item </dt><dd>{{ outwardentry.nameOfTheItem }}</dd>
+              
+            
+                
+                 <dt>U Om </dt><dd>{{ outwardentry.uOm }}</dd>
+              
+            
+                
+                 <dt>Issued </dt><dd>{{ outwardentry.issued }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ outwardentry.jobNo }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

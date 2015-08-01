@@ -1,0 +1,62 @@
+<section data-ng-controller="ItemMastersController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Item Master</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/item-masters">ItemMaster</a>
+          </li>
+          <li class="active">
+            <strong>View Item Master</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == itemmaster.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/item-masters/{{itemmaster._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Item Code </dt><dd>{{ itemmaster.itemCode }}</dd>
+              
+            
+                
+                 <dt>Name Of The Item </dt><dd>{{ itemmaster.nameOfTheItem }}</dd>
+              
+            
+                
+                 <dt>U Om </dt><dd>{{ itemmaster.uOm }}</dd>
+              
+            
+                
+                 <dt>Unit Rate </dt><dd>{{ itemmaster.unitRate }}</dd>
+              
+            
+                
+                 <dt>Opening Balance </dt><dd>{{ itemmaster.openingBalance }}</dd>
+              
+            
+                
+                 <dt>Type </dt><dd>{{ itemmaster.type }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

@@ -1,0 +1,138 @@
+<section data-ng-controller="YarnReceiptEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Yarn Receipt Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/yarn-receipt-entries">YarnReceiptEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Yarn Receipt Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == yarnreceiptentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/yarn-receipt-entries/{{yarnreceiptentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Job No </dt><dd>{{ yarnreceiptentry.jobNo }}</dd>
+              
+            
+              
+                 <dt>Job Date </dt><dd>{{ yarnreceiptentry.jobDate | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ yarnreceiptentry.party }}</dd>
+              
+            
+              
+                 <dt>Expected Delivery Date </dt><dd>{{ yarnreceiptentry.expectedDeliveryDate | date }}</dd>
+              
+            
+                
+                 <dt>Order </dt><dd>{{ yarnreceiptentry.order }}</dd>
+              
+            
+                
+                 <dt>Sample </dt><dd>{{ yarnreceiptentry.sample }}</dd>
+              
+            
+                
+                 <dt>Order No </dt><dd>{{ yarnreceiptentry.orderNo }}</dd>
+              
+            
+                
+                 <dt>Marketing By </dt><dd>{{ yarnreceiptentry.marketingBy }}</dd>
+              
+            
+                
+                 <dt>Knitter </dt><dd>{{ yarnreceiptentry.knitter }}</dd>
+              
+            
+                
+                 <dt>Design </dt><dd>{{ yarnreceiptentry.design }}</dd>
+              
+            
+                
+                 <dt>Colour </dt><dd>{{ yarnreceiptentry.colour }}</dd>
+              
+            
+                
+                 <dt>Rate </dt><dd>{{ yarnreceiptentry.rate }}</dd>
+              
+            
+                
+                 <dt>Party Delivery Chalan No </dt><dd>{{ yarnreceiptentry.partyDeliveryChalanNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ yarnreceiptentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Received Vehicle No </dt><dd>{{ yarnreceiptentry.receivedVehicleNo }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ yarnreceiptentry.remarks }}</dd>
+              
+            
+                
+                 <dt>Received By </dt><dd>{{ yarnreceiptentry.receivedBy }}</dd>
+              
+            
+                
+                 <dt>Prepared By </dt><dd>{{ yarnreceiptentry.preparedBy }}</dd>
+              
+            
+                
+                 <dt>Authorised By </dt><dd>{{ yarnreceiptentry.authorisedBy }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ yarnreceiptentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Yarn Description </dt><dd>{{ yarnreceiptentry.yarnDescription }}</dd>
+              
+            
+                
+                 <dt>Cones </dt><dd>{{ yarnreceiptentry.cones }}</dd>
+              
+            
+                
+                 <dt>Bags </dt><dd>{{ yarnreceiptentry.bags }}</dd>
+              
+            
+                
+                 <dt>Net Kgs </dt><dd>{{ yarnreceiptentry.netKgs }}</dd>
+              
+            
+                
+                 <dt>Gross Kgs </dt><dd>{{ yarnreceiptentry.grossKgs }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

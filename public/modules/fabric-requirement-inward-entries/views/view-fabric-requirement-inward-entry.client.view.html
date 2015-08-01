@@ -1,0 +1,122 @@
+<section data-ng-controller="FabricRequirementInwardEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Fabric Requirement Inward Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/fabric-requirement-inward-entries">FabricRequirementInwardEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Fabric Requirement Inward Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == fabricrequirementinwardentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/fabric-requirement-inward-entries/{{fabricrequirementinwardentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Job No </dt><dd>{{ fabricrequirementinwardentry.jobNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ fabricrequirementinwardentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ fabricrequirementinwardentry.party }}</dd>
+              
+            
+              
+                 <dt>Expected Delivery Date </dt><dd>{{ fabricrequirementinwardentry.expectedDeliveryDate | date }}</dd>
+              
+            
+                
+                 <dt>Order </dt><dd>{{ fabricrequirementinwardentry.order }}</dd>
+              
+            
+                
+                 <dt>Sample </dt><dd>{{ fabricrequirementinwardentry.sample }}</dd>
+              
+            
+                
+                 <dt>Order No </dt><dd>{{ fabricrequirementinwardentry.orderNo }}</dd>
+              
+            
+                
+                 <dt>Marketing By </dt><dd>{{ fabricrequirementinwardentry.marketingBy }}</dd>
+              
+            
+                
+                 <dt>Knitter </dt><dd>{{ fabricrequirementinwardentry.knitter }}</dd>
+              
+            
+                
+                 <dt>Design </dt><dd>{{ fabricrequirementinwardentry.design }}</dd>
+              
+            
+                
+                 <dt>Colour </dt><dd>{{ fabricrequirementinwardentry.colour }}</dd>
+              
+            
+                
+                 <dt>Rate </dt><dd>{{ fabricrequirementinwardentry.rate }}</dd>
+              
+            
+                
+                 <dt>Gsm </dt><dd>{{ fabricrequirementinwardentry.gsm }}</dd>
+              
+            
+                
+                 <dt>Line Length </dt><dd>{{ fabricrequirementinwardentry.lineLength }}</dd>
+              
+            
+                
+                 <dt>Gg </dt><dd>{{ fabricrequirementinwardentry.gg }}</dd>
+              
+            
+                
+                 <dt>Mill </dt><dd>{{ fabricrequirementinwardentry.mill }}</dd>
+              
+            
+                
+                 <dt>Count </dt><dd>{{ fabricrequirementinwardentry.count }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ fabricrequirementinwardentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ fabricrequirementinwardentry.dia }}</dd>
+              
+            
+                
+                 <dt>Required Quantity </dt><dd>{{ fabricrequirementinwardentry.requiredQuantity }}</dd>
+              
+            
+                
+                 <dt>Machine No </dt><dd>{{ fabricrequirementinwardentry.machineNo }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>
