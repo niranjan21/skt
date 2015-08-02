@@ -1,0 +1,109 @@
+<section data-ng-controller="GeneralItemInwardEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify General Item Inward Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/general-item-inward-entries">GeneralItemInwardEntry</a>
+          </li>
+          <li class="active">
+            <strong>Modify General Item Inward Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="grnno">Grnno</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="generaliteminwardentry.grnno" id="grnno" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="grnyear">Grnyear</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="generaliteminwardentry.grnyear" id="grnyear" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="generaliteminwardentry.date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="ourDcno">Our Dcno</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="generaliteminwardentry.ourDcno" id="ourDcno" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="yourDcno">Your Dcno</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="generaliteminwardentry.yourDcno" id="yourDcno" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="receivedFrom">Received From</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="generaliteminwardentry.receivedFrom" id="receivedFrom" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sNo">S No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="generaliteminwardentry.sNo" id="sNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="nameoftheItem">Nameofthe Item</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="generaliteminwardentry.nameoftheItem" id="nameoftheItem" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="uOm">U Om</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="generaliteminwardentry.uOm" id="uOm" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="quantity">Quantity</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="generaliteminwardentry.quantity" id="quantity" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

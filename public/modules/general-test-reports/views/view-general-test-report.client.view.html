@@ -1,0 +1,106 @@
+<section data-ng-controller="GeneralTestReportsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View General Test Report</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/general-test-reports">GeneralTestReport</a>
+          </li>
+          <li class="active">
+            <strong>View General Test Report</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == generaltestreport.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/general-test-reports/{{generaltestreport._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>From </dt><dd>{{ generaltestreport.from }}</dd>
+              
+            
+                
+                 <dt>To </dt><dd>{{ generaltestreport.to }}</dd>
+              
+            
+                
+                 <dt>Report No </dt><dd>{{ generaltestreport.reportNo }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ generaltestreport.jobNo }}</dd>
+              
+            
+                
+                 <dt>Party Order Reference </dt><dd>{{ generaltestreport.partyOrderReference }}</dd>
+              
+            
+                
+                 <dt>Approved Signatory </dt><dd>{{ generaltestreport.approvedSignatory }}</dd>
+              
+            
+                
+                 <dt>Authorised Signatory </dt><dd>{{ generaltestreport.authorisedSignatory }}</dd>
+              
+            
+                
+                 <dt>Count </dt><dd>{{ generaltestreport.count }}</dd>
+              
+            
+                
+                 <dt>Mill </dt><dd>{{ generaltestreport.mill }}</dd>
+              
+            
+                
+                 <dt>Noof Cones </dt><dd>{{ generaltestreport.noofCones }}</dd>
+              
+            
+                
+                 <dt>Gross Wtin Cone </dt><dd>{{ generaltestreport.grossWtinCone }}</dd>
+              
+            
+                
+                 <dt>Gross Wtin Kithan </dt><dd>{{ generaltestreport.grossWtinKithan }}</dd>
+              
+            
+                
+                 <dt>Net Wtin Kgs </dt><dd>{{ generaltestreport.netWtinKgs }}</dd>
+              
+            
+                
+                 <dt>Fabric Produced </dt><dd>{{ generaltestreport.fabricProduced }}</dd>
+              
+            
+                
+                 <dt>Balance Yarn Net Weight </dt><dd>{{ generaltestreport.balanceYarnNetWeight }}</dd>
+              
+            
+                
+                 <dt>Shortagein Kgs </dt><dd>{{ generaltestreport.shortageinKgs }}</dd>
+              
+            
+                
+                 <dt>Lossinpercentage </dt><dd>{{ generaltestreport.lossinpercentage }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

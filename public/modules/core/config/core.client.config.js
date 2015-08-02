@@ -60,6 +60,20 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'generalitems', 'Direct Inward Entry', 'direct-inward-entries');
       
+      Menus.addSubMenuItem('topbar', 'generalitems', 'Direct Outward Entry', 'direct-outward-entries');
+      
+      Menus.addSubMenuItem('topbar', 'generalitems', 'General Invoice Register', 'general-invoice-registers');
+      
+      Menus.addSubMenuItem('topbar', 'generalitems', 'General Item Inward Entry', 'general-item-inward-entries');
+      
+      Menus.addSubMenuItem('topbar', 'generalitems', 'General Item Outward Entry', 'general-item-outward-entries');
+      
+      Menus.addSubMenuItem('topbar', 'generalitems', 'General Item Outstanding Register', 'general-item-outstanding-registers');
+      
+      Menus.addSubMenuItem('topbar', 'generalitems', 'General Item Outward Register', 'general-item-outward-registers');
+      
+      Menus.addSubMenuItem('topbar', 'generalitems', 'General Test Report', 'general-test-reports');
+      
     
 	}
 ]);

@@ -1,0 +1,78 @@
+<section data-ng-controller="GeneralItemInwardEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View General Item Inward Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/general-item-inward-entries">GeneralItemInwardEntry</a>
+          </li>
+          <li class="active">
+            <strong>View General Item Inward Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == generaliteminwardentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/general-item-inward-entries/{{generaliteminwardentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Grnno </dt><dd>{{ generaliteminwardentry.grnno }}</dd>
+              
+            
+                
+                 <dt>Grnyear </dt><dd>{{ generaliteminwardentry.grnyear }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ generaliteminwardentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Our Dcno </dt><dd>{{ generaliteminwardentry.ourDcno }}</dd>
+              
+            
+                
+                 <dt>Your Dcno </dt><dd>{{ generaliteminwardentry.yourDcno }}</dd>
+              
+            
+                
+                 <dt>Received From </dt><dd>{{ generaliteminwardentry.receivedFrom }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ generaliteminwardentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Nameofthe Item </dt><dd>{{ generaliteminwardentry.nameoftheItem }}</dd>
+              
+            
+                
+                 <dt>U Om </dt><dd>{{ generaliteminwardentry.uOm }}</dd>
+              
+            
+                
+                 <dt>Quantity </dt><dd>{{ generaliteminwardentry.quantity }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

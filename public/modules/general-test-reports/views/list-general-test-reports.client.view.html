@@ -1,0 +1,154 @@
+<section data-ng-controller="GeneralTestReportsController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List General Test Report</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List General Test Report</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!generaltestreports.$resolved || generaltestreports.length">
+    No GeneralTestReports yet, why don't you <a href="/#!/general-test-reports/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="generaltestreports.length>0">
+    <div class="ibox-title">
+      <h5>GeneralTestReports ({{generaltestreports.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/general-test-reports/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search generaltestreport" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>From</th>
+              
+              <th>To</th>
+              
+              <th>Report No</th>
+              
+              <th>Job No</th>
+              
+              <th>Party Order Reference</th>
+              
+              <th>Approved Signatory</th>
+              
+              <th>Authorised Signatory</th>
+              
+              <th>Count</th>
+              
+              <th>Mill</th>
+              
+              <th>Noof Cones</th>
+              
+              <th>Gross Wtin Cone</th>
+              
+              <th>Gross Wtin Kithan</th>
+              
+              <th>Net Wtin Kgs</th>
+              
+              <th>Fabric Produced</th>
+              
+              <th>Balance Yarn Net Weight</th>
+              
+              <th>Shortagein Kgs</th>
+              
+              <th>Lossinpercentage</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="generaltestreport in generaltestreports | filter: searchtext">
+              
+                
+              <td>{{ generaltestreport.from }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.to }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.reportNo }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.jobNo }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.partyOrderReference }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.approvedSignatory }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.authorisedSignatory }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.count }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.mill }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.noofCones }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.grossWtinCone }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.grossWtinKithan }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.netWtinKgs }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.fabricProduced }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.balanceYarnNetWeight }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.shortageinKgs }}</td>
+              
+              
+                
+              <td>{{ generaltestreport.lossinpercentage }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/general-test-reports/{{generaltestreport._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

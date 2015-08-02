@@ -1,0 +1,158 @@
+<section data-ng-controller="GeneralTestReportsController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New General Test Report</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/general-test-reports">GeneralTestReport</a>
+          </li>
+          <li class="active">
+            <strong>New General Test Report</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="from">From</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="from" id="from" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="to">To</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="to" id="to" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="reportNo">Report No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="reportNo" id="reportNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobNo">Job No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="jobNo" id="jobNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="partyOrderReference">Party Order Reference</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="partyOrderReference" id="partyOrderReference" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="approvedSignatory">Approved Signatory</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="approvedSignatory" id="approvedSignatory" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="authorisedSignatory">Authorised Signatory</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="authorisedSignatory" id="authorisedSignatory" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="count">Count</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="count" id="count" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="mill">Mill</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="mill" id="mill" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="noofCones">Noof Cones</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="noofCones" id="noofCones" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="grossWtinCone">Gross Wtin Cone</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="grossWtinCone" id="grossWtinCone" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="grossWtinKithan">Gross Wtin Kithan</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="grossWtinKithan" id="grossWtinKithan" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="netWtinKgs">Net Wtin Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="netWtinKgs" id="netWtinKgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="fabricProduced">Fabric Produced</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricProduced" id="fabricProduced" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="balanceYarnNetWeight">Balance Yarn Net Weight</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="balanceYarnNetWeight" id="balanceYarnNetWeight" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="shortageinKgs">Shortagein Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="shortageinKgs" id="shortageinKgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="lossinpercentage">Lossinpercentage</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="lossinpercentage" id="lossinpercentage" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

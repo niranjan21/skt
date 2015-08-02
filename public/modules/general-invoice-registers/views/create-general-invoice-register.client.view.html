@@ -1,0 +1,67 @@
+<section data-ng-controller="GeneralInvoiceRegistersController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New General Invoice Register</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/general-invoice-registers">GeneralInvoiceRegister</a>
+          </li>
+          <li class="active">
+            <strong>New General Invoice Register</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="invoiceNo">Invoice No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="invoiceNo" id="invoiceNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="party">Party</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="party" id="party" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="amount">Amount</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="amount" id="amount" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
