@@ -1,0 +1,94 @@
+<section data-ng-controller="DirectInwardEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Direct Inward Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/direct-inward-entries">DirectInwardEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Direct Inward Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == directinwardentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/direct-inward-entries/{{directinwardentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Knitter </dt><dd>{{ directinwardentry.knitter }}</dd>
+              
+            
+                
+                 <dt>Grnno </dt><dd>{{ directinwardentry.grnno }}</dd>
+              
+            
+                
+                 <dt>Grnyear </dt><dd>{{ directinwardentry.grnyear }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ directinwardentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Inward From </dt><dd>{{ directinwardentry.inwardFrom }}</dd>
+              
+            
+                
+                 <dt>Returnable </dt><dd>{{ directinwardentry.returnable }}</dd>
+              
+            
+                
+                 <dt>Non Returnable </dt><dd>{{ directinwardentry.nonReturnable }}</dd>
+              
+            
+                
+                 <dt>Our Reference </dt><dd>{{ directinwardentry.ourReference }}</dd>
+              
+            
+                
+                 <dt>Party Reference </dt><dd>{{ directinwardentry.partyReference }}</dd>
+              
+            
+                
+                 <dt>Vehicle </dt><dd>{{ directinwardentry.vehicle }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ directinwardentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Nameofthe Item </dt><dd>{{ directinwardentry.nameoftheItem }}</dd>
+              
+            
+                
+                 <dt>U Om </dt><dd>{{ directinwardentry.uOm }}</dd>
+              
+            
+                
+                 <dt>Quantity </dt><dd>{{ directinwardentry.quantity }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

@@ -1,0 +1,137 @@
+<section data-ng-controller="DirectInwardEntriesController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Direct Inward Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/direct-inward-entries">DirectInwardEntry</a>
+          </li>
+          <li class="active">
+            <strong>New Direct Inward Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="knitter">Knitter</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="knitter" id="knitter" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="grnno">Grnno</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="grnno" id="grnno" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="grnyear">Grnyear</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="grnyear" id="grnyear" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="inwardFrom">Inward From</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="inwardFrom" id="inwardFrom" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="returnable">Returnable</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="returnable" id="returnable" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="nonReturnable">Non Returnable</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="nonReturnable" id="nonReturnable" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="ourReference">Our Reference</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="ourReference" id="ourReference" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="partyReference">Party Reference</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="partyReference" id="partyReference" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="vehicle">Vehicle</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="vehicle" id="vehicle" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sNo">S No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="sNo" id="sNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="nameoftheItem">Nameofthe Item</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="nameoftheItem" id="nameoftheItem" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="uOm">U Om</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="uOm" id="uOm" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="quantity">Quantity</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="quantity" id="quantity" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

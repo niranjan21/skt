@@ -1,0 +1,90 @@
+<section data-ng-controller="FabricTransfersController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Fabric Transfer</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/fabric-transfers">FabricTransfer</a>
+          </li>
+          <li class="active">
+            <strong>View Fabric Transfer</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == fabrictransfer.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/fabric-transfers/{{fabrictransfer._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Transfer No </dt><dd>{{ fabrictransfer.transferNo }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ fabrictransfer.jobNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ fabrictransfer.date | date }}</dd>
+              
+            
+                
+                 <dt>Knitter </dt><dd>{{ fabrictransfer.knitter }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ fabrictransfer.party }}</dd>
+              
+            
+                
+                 <dt>Fabric </dt><dd>{{ fabrictransfer.fabric }}</dd>
+              
+            
+                
+                 <dt>Gsm </dt><dd>{{ fabrictransfer.gsm }}</dd>
+              
+            
+                
+                 <dt>Kgs </dt><dd>{{ fabrictransfer.kgs }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ fabrictransfer.dia }}</dd>
+              
+            
+                
+                 <dt>Stock Rolls </dt><dd>{{ fabrictransfer.stockRolls }}</dd>
+              
+            
+                
+                 <dt>Stock Kgs </dt><dd>{{ fabrictransfer.stockKgs }}</dd>
+              
+            
+                
+                 <dt>Transfer Rolls </dt><dd>{{ fabrictransfer.transferRolls }}</dd>
+              
+            
+                
+                 <dt>Transfer Kgs </dt><dd>{{ fabrictransfer.transferKgs }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

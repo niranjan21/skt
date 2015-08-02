@@ -1,0 +1,66 @@
+<section data-ng-controller="FabricStockReportsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Fabric Stock Report</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/fabric-stock-reports">FabricStockReport</a>
+          </li>
+          <li class="active">
+            <strong>View Fabric Stock Report</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == fabricstockreport.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/fabric-stock-reports/{{fabricstockreport._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>S No </dt><dd>{{ fabricstockreport.sNo }}</dd>
+              
+            
+                
+                 <dt>Fabric </dt><dd>{{ fabricstockreport.fabric }}</dd>
+              
+            
+                
+                 <dt>Count </dt><dd>{{ fabricstockreport.count }}</dd>
+              
+            
+                
+                 <dt>Gsm </dt><dd>{{ fabricstockreport.gsm }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ fabricstockreport.dia }}</dd>
+              
+            
+                
+                 <dt>Rolls </dt><dd>{{ fabricstockreport.rolls }}</dd>
+              
+            
+                
+                 <dt>Kgs </dt><dd>{{ fabricstockreport.kgs }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

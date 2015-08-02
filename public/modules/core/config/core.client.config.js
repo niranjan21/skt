@@ -45,6 +45,21 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Item Master', 'fabric-item-masters');
       
+      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Sales', 'fabric-sales');
+      
+      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Sales Register', 'fabric-sale-registers');
+      
+      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Stock Report', 'fabric-stock-reports');
+      
+      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Transfer', 'fabric-transfers');
+      
+      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Transfer Register', 'fabric-transfer-registers');
+      
+    
+      Menus.addMenuItem('topbar', 'General Items', 'generalitems', 'dropdown');
+      
+      Menus.addSubMenuItem('topbar', 'generalitems', 'Direct Inward Entry', 'direct-inward-entries');
+      
     
 	}
 ]);

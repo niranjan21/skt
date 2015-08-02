@@ -1,0 +1,88 @@
+<section data-ng-controller="FabricStockReportsController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Fabric Stock Report</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/fabric-stock-reports">FabricStockReport</a>
+          </li>
+          <li class="active">
+            <strong>New Fabric Stock Report</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sNo">S No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="sNo" id="sNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="fabric">Fabric</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabric" id="fabric" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="count">Count</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="count" id="count" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="gsm">Gsm</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="gsm" id="gsm" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="dia">Dia</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="dia" id="dia" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="rolls">Rolls</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="rolls" id="rolls" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="kgs">Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="kgs" id="kgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

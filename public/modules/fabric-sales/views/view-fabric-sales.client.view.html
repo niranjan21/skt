@@ -1,0 +1,94 @@
+<section data-ng-controller="FabricSalesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Fabric Sales</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/fabric-sales">FabricSales</a>
+          </li>
+          <li class="active">
+            <strong>View Fabric Sales</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == fabricsales.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/fabric-sales/{{fabricsales._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Invoice No </dt><dd>{{ fabricsales.invoiceNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ fabricsales.date | date }}</dd>
+              
+            
+                
+                 <dt>Knitter </dt><dd>{{ fabricsales.knitter }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ fabricsales.party }}</dd>
+              
+            
+                
+                 <dt>Party Ref </dt><dd>{{ fabricsales.partyRef }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ fabricsales.sNo }}</dd>
+              
+            
+                
+                 <dt>Fabric </dt><dd>{{ fabricsales.fabric }}</dd>
+              
+            
+                
+                 <dt>Count </dt><dd>{{ fabricsales.count }}</dd>
+              
+            
+                
+                 <dt>Gsm </dt><dd>{{ fabricsales.gsm }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ fabricsales.dia }}</dd>
+              
+            
+                
+                 <dt>Rolls </dt><dd>{{ fabricsales.rolls }}</dd>
+              
+            
+                
+                 <dt>Kgs </dt><dd>{{ fabricsales.kgs }}</dd>
+              
+            
+                
+                 <dt>Rate </dt><dd>{{ fabricsales.rate }}</dd>
+              
+            
+                
+                 <dt>Rate Per Unit </dt><dd>{{ fabricsales.ratePerUnit }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

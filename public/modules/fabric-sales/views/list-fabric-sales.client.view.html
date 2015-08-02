@@ -1,0 +1,136 @@
+<section data-ng-controller="FabricSalesController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List Fabric Sales</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List Fabric Sales</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!fabricsales.$resolved || fabricsales.length">
+    No FabricSales yet, why don't you <a href="/#!/fabric-sales/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="fabricsales.length>0">
+    <div class="ibox-title">
+      <h5>FabricSales ({{fabricsales.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/fabric-sales/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search fabricsale" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>Invoice No</th>
+              
+              <th>Date</th>
+              
+              <th>Knitter</th>
+              
+              <th>Party</th>
+              
+              <th>Party Ref</th>
+              
+              <th>S No</th>
+              
+              <th>Fabric</th>
+              
+              <th>Count</th>
+              
+              <th>Gsm</th>
+              
+              <th>Dia</th>
+              
+              <th>Rolls</th>
+              
+              <th>Kgs</th>
+              
+              <th>Rate</th>
+              
+              <th>Rate Per Unit</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="fabricsale in fabricsales | filter: searchtext">
+              
+                
+              <td>{{ fabricsale.invoiceNo }}</td>
+              
+              
+              
+              <td>{{ fabricsale.date | date }}</td>
+              
+              
+                
+              <td>{{ fabricsale.knitter }}</td>
+              
+              
+                
+              <td>{{ fabricsale.party }}</td>
+              
+              
+                
+              <td>{{ fabricsale.partyRef }}</td>
+              
+              
+                
+              <td>{{ fabricsale.sNo }}</td>
+              
+              
+                
+              <td>{{ fabricsale.fabric }}</td>
+              
+              
+                
+              <td>{{ fabricsale.count }}</td>
+              
+              
+                
+              <td>{{ fabricsale.gsm }}</td>
+              
+              
+                
+              <td>{{ fabricsale.dia }}</td>
+              
+              
+                
+              <td>{{ fabricsale.rolls }}</td>
+              
+              
+                
+              <td>{{ fabricsale.kgs }}</td>
+              
+              
+                
+              <td>{{ fabricsale.rate }}</td>
+              
+              
+                
+              <td>{{ fabricsale.ratePerUnit }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/fabric-sales/{{fabricsale._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
