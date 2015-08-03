@@ -1,0 +1,158 @@
+<section data-ng-controller="EmployeeMastersController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify Employee Master</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/employee-masters">EmployeeMaster</a>
+          </li>
+          <li class="active">
+            <strong>Modify Employee Master</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="code">Code</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="employeemaster.code" id="code" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="name">Name</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="employeemaster.name" id="name" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="address">Address</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="employeemaster.address" id="address" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="basicPay">Basic Pay</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.basicPay" id="basicPay" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="pfbasic">P.F Basic</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.pfbasic" id="pfbasic" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="da">Dearness Allowance</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.da" id="da" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="travelAllowance">Travel Allowance</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.travelAllowance" id="travelAllowance" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="teaAllowance">Tea Allowance</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.teaAllowance" id="teaAllowance" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sundayAllowance">Sunday Allowance</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.sundayAllowance" id="sundayAllowance" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="pf">P.F</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.pf" id="pf" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="esi">ESI</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.esi" id="esi" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="leaveWage">Leave Wage</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.leaveWage" id="leaveWage" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="pieceshiftweek">Piece/Shift/Week</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.pieceShiftWeek" id="pieceshiftweek" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="joiningDate">Joining Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="employeemaster.joiningDate" id="joiningDate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="resignDate">Resign Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="employeemaster.resignDate" id="resignDate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="addlwagepershift">Additional Wage Per Shift</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.addlWagePerShift" id="addlwagepershift" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="allowancePerShift">Allowance Per Shift</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="employeemaster.allowancePerShift" id="allowancePerShift" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+<section data-ng-controller="DiaListsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Dia List</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/dia-lists">DiaList</a>
+          </li>
+          <li class="active">
+            <strong>View Dia List</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == dialist.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/dia-lists/{{dialist._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>S No </dt><dd>{{ dialist.sno }}</dd>
+              
+            
+                
+                 <dt>Permissible Dia List </dt><dd>{{ dialist.permissibleDiaList }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

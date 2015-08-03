@@ -1,0 +1,106 @@
+<section data-ng-controller="EmployeeMastersController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Employee Master</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/employee-masters">EmployeeMaster</a>
+          </li>
+          <li class="active">
+            <strong>View Employee Master</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == employeemaster.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/employee-masters/{{employeemaster._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Code </dt><dd>{{ employeemaster.code }}</dd>
+              
+            
+                
+                 <dt>Name </dt><dd>{{ employeemaster.name }}</dd>
+              
+            
+                
+                 <dt>Address </dt><dd>{{ employeemaster.address }}</dd>
+              
+            
+                
+                 <dt>Basic Pay </dt><dd>{{ employeemaster.basicPay }}</dd>
+              
+            
+                
+                 <dt>P.F Basic </dt><dd>{{ employeemaster.pfbasic }}</dd>
+              
+            
+                
+                 <dt>Dearness Allowance </dt><dd>{{ employeemaster.da }}</dd>
+              
+            
+                
+                 <dt>Travel Allowance </dt><dd>{{ employeemaster.travelAllowance }}</dd>
+              
+            
+                
+                 <dt>Tea Allowance </dt><dd>{{ employeemaster.teaAllowance }}</dd>
+              
+            
+                
+                 <dt>Sunday Allowance </dt><dd>{{ employeemaster.sundayAllowance }}</dd>
+              
+            
+                
+                 <dt>PF </dt><dd>{{ employeemaster.pf }}</dd>
+              
+            
+                
+                 <dt>ESI </dt><dd>{{ employeemaster.esi }}</dd>
+              
+            
+                
+                 <dt>Leave Wage </dt><dd>{{ employeemaster.leaveWage }}</dd>
+              
+            
+                
+                 <dt>Piece/Shift/Week </dt><dd>{{ employeemaster.pieceShiftWeek }}</dd>
+              
+            
+              
+                 <dt>Joining Date </dt><dd>{{ employeemaster.joiningDate | date }}</dd>
+              
+            
+              
+                 <dt>Resign Date </dt><dd>{{ employeemaster.resignDate | date }}</dd>
+              
+            
+                
+                 <dt>Additional Wage Per Shift </dt><dd>{{ employeemaster.addlWagePerShift }}</dd>
+              
+            
+                
+                 <dt>Allowance Per Shift </dt><dd>{{ employeemaster.allowancePerShift }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

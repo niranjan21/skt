@@ -85,6 +85,10 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'master', 'Count Master', 'count-masters');
       
+      Menus.addSubMenuItem('topbar', 'master', 'Dia List', 'dia-lists');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Employee Master', 'employee-masters');
+      
     
 	}
 ]);
