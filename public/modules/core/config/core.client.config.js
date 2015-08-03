@@ -74,6 +74,17 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'generalitems', 'General Test Report', 'general-test-reports');
       
+      Menus.addSubMenuItem('topbar', 'generalitems', 'Invoice Entry', 'invoice-entries');
+      
+    
+      Menus.addMenuItem('topbar', 'Master', 'master', 'dropdown');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Collar Size', 'collar-sizes');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Concern', 'concerns');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Count Master', 'count-masters');
+      
     
 	}
 ]);

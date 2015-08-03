@@ -1,0 +1,116 @@
+<section data-ng-controller="ConcernsController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Concern</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/concerns">Concern</a>
+          </li>
+          <li class="active">
+            <strong>New Concern</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="concernName">Concern Name</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="concernName" id="concernName" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="inshort">Inshort</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="inshort" id="inshort" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="address">Address</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="address" id="address" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="phoneNo">Phone No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="phoneNo" id="phoneNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="faxNo">Fax No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="faxNo" id="faxNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="mobileNo">Mobile No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="mobileNo" id="mobileNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="tin">TIN</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="tin" id="tin" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="cst">CST</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="cst" id="cst" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="pan">PAN</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="pan" id="pan" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="esino">ESI No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="esino" id="esino" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="designation">Designation</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="designation" id="designation" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,98 @@
+<section data-ng-controller="InvoiceEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Invoice Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/invoice-entries">InvoiceEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Invoice Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == invoiceentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/invoice-entries/{{invoiceentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Invoice No </dt><dd>{{ invoiceentry.invoiceNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ invoiceentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Knitter </dt><dd>{{ invoiceentry.knitter }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ invoiceentry.party }}</dd>
+              
+            
+                
+                 <dt>Party Reference </dt><dd>{{ invoiceentry.partyReference }}</dd>
+              
+            
+                
+                 <dt>Our Dcno </dt><dd>{{ invoiceentry.ourDcno }}</dd>
+              
+            
+                
+                 <dt>Prepared By </dt><dd>{{ invoiceentry.preparedBy }}</dd>
+              
+            
+                
+                 <dt>Verified By </dt><dd>{{ invoiceentry.verifiedBy }}</dd>
+              
+            
+                
+                 <dt>Authorised By </dt><dd>{{ invoiceentry.authorisedBy }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ invoiceentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Descriptionof Goods </dt><dd>{{ invoiceentry.descriptionofGoods }}</dd>
+              
+            
+                
+                 <dt>Rolls </dt><dd>{{ invoiceentry.rolls }}</dd>
+              
+            
+                
+                 <dt>Quantityin Kgs </dt><dd>{{ invoiceentry.quantityinKgs }}</dd>
+              
+            
+                
+                 <dt>Rate Per Unit </dt><dd>{{ invoiceentry.ratePerUnit }}</dd>
+              
+            
+                
+                 <dt>Amount </dt><dd>{{ invoiceentry.amount }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

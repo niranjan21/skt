@@ -1,0 +1,53 @@
+<section data-ng-controller="CountMastersController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Count Master</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/count-masters">CountMaster</a>
+          </li>
+          <li class="active">
+            <strong>New Count Master</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sno">Sno</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="sno" id="sno" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="permissibleCountList">Permissible Count List</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="permissibleCountList" id="permissibleCountList" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

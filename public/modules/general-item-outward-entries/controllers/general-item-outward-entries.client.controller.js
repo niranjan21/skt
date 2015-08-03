@@ -12,7 +12,7 @@ angular.module('general-item-outward-entries').controller('GeneralItemOutwardEnt
         
         deliveryChalanNo: this.deliveryChalanNo,
         
-        deliveryChalanYear: this.deliveryChalanYear,
+        receiver: this.receiver,
         
         date: this.date,
         

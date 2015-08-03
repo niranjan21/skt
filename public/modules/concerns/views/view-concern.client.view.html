@@ -1,0 +1,82 @@
+<section data-ng-controller="ConcernsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Concern</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/concerns">Concern</a>
+          </li>
+          <li class="active">
+            <strong>View Concern</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == concern.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/concerns/{{concern._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Concern Name </dt><dd>{{ concern.concernName }}</dd>
+              
+            
+                
+                 <dt>Inshort </dt><dd>{{ concern.inshort }}</dd>
+              
+            
+                
+                 <dt>Address </dt><dd>{{ concern.address }}</dd>
+              
+            
+                
+                 <dt>Phone No </dt><dd>{{ concern.phoneNo }}</dd>
+              
+            
+                
+                 <dt>Fax No </dt><dd>{{ concern.faxNo }}</dd>
+              
+            
+                
+                 <dt>Mobile No </dt><dd>{{ concern.mobileNo }}</dd>
+              
+            
+                
+                 <dt>TIN </dt><dd>{{ concern.tin }}</dd>
+              
+            
+                
+                 <dt>CST </dt><dd>{{ concern.cst }}</dd>
+              
+            
+                
+                 <dt>PAN </dt><dd>{{ concern.pan }}</dd>
+              
+            
+                
+                 <dt>ESI No </dt><dd>{{ concern.esino }}</dd>
+              
+            
+                
+                 <dt>Designation </dt><dd>{{ concern.designation }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

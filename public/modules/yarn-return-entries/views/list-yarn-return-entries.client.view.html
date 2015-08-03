@@ -36,9 +36,9 @@
           <thead>
           <tr>
               
-              <th>Return Delivery Chalan No</th>
+              <th>Return D.C No</th>
               
-              <th>Return Delivery Chalan Date</th>
+              <th>Return D.C Date</th>
               
               <th>Job No</th>
               
@@ -48,7 +48,7 @@
               
               <th>Party</th>
               
-              <th>Party Delivery Chalan No</th>
+              <th>Party D.C No</th>
               
               <th>Date</th>
               
@@ -80,11 +80,11 @@
           <tr data-ng-repeat="yarnreturnentry in yarnreturnentries | filter: searchtext">
               
                 
-              <td>{{ yarnreturnentry.returnDeliveryChalanNo }}</td>
+              <td>{{ yarnreturnentry.returndeliverychalanno }}</td>
               
               
               
-              <td>{{ yarnreturnentry.returnDeliveryChalanDate | date }}</td>
+              <td>{{ yarnreturnentry.returndeliverychalandate | date }}</td>
               
               
                 
@@ -104,7 +104,7 @@
               
               
                 
-              <td>{{ yarnreturnentry.partyDeliveryChalanNo }}</td>
+              <td>{{ yarnreturnentry.partydeliverychalanno }}</td>
               
               
               
@@ -136,7 +136,7 @@
               
               
                 
-              <td>{{ yarnreturnentry.receivedWeightKgs }}</td>
+              <td>{{ yarnreturnentry.receivedweightkgs }}</td>
               
               
                 

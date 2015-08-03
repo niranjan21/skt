@@ -17,9 +17,9 @@ var GeneralItemOutwardEntrySchema = new Schema({
 		required: 'Please fill deliveryChalanNo name'
 	},
   
-  deliveryChalanYear: {
-		type: Number,
-		required: 'Please fill deliveryChalanYear name'
+  receiver: {
+		type: String,
+		required: 'Please fill receiver name'
 	},
   
   date: {
