@@ -1,0 +1,66 @@
+<section data-ng-controller="MachineKnittingsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Machine Knitting</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/machine-knittings">MachineKnitting</a>
+          </li>
+          <li class="active">
+            <strong>View Machine Knitting</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == machineknitting.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/machine-knittings/{{machineknitting._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Knitter </dt><dd>{{ machineknitting.knitter }}</dd>
+              
+            
+                
+                 <dt>Machine Code </dt><dd>{{ machineknitting.machineCode }}</dd>
+              
+            
+                
+                 <dt>Machine Make </dt><dd>{{ machineknitting.machineMake }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ machineknitting.dia }}</dd>
+              
+            
+                
+                 <dt>Mark </dt><dd>{{ machineknitting.mark }}</dd>
+              
+            
+                
+                 <dt>Production Per Day </dt><dd>{{ machineknitting.productionPerDay }}</dd>
+              
+            
+                
+                 <dt>Index </dt><dd>{{ machineknitting.index }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

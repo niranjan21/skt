@@ -1,0 +1,88 @@
+<section data-ng-controller="MachineKnittingsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify Machine Knitting</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/machine-knittings">MachineKnitting</a>
+          </li>
+          <li class="active">
+            <strong>Modify Machine Knitting</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="knitter">Knitter</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="machineknitting.knitter" id="knitter" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="machineCode">Machine Code</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="machineknitting.machineCode" id="machineCode" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="machineMake">Machine Make</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="machineknitting.machineMake" id="machineMake" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="dia">DIA</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="machineknitting.dia" id="dia" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="mark">Mark</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="machineknitting.mark" id="mark" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="productionPerDay">Production Per Day</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="machineknitting.productionPerDay" id="productionPerDay" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="index">Index</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="machineknitting.index" id="index" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

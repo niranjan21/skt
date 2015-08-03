@@ -89,6 +89,20 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'master', 'Employee Master', 'employee-masters');
       
+      Menus.addSubMenuItem('topbar', 'master', 'Expenses', 'expenses');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Fabric Description', 'fabric-descriptions');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Fabric Group', 'fabric-groups');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Fixed Rate', 'fixed-rates');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Leave Master', 'leave-masters');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Machine Knitting', 'machine-knittings');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Marketing', 'marketings');
+      
     
 	}
 ]);
