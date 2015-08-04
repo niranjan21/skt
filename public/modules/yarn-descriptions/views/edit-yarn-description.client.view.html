@@ -1,16 +1,16 @@
-<section data-ng-controller="MarketingsController" data-ng-init="findOne()">
+<section data-ng-controller="YarnDescriptionsController" data-ng-init="findOne()">
   <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-12">
-      <h2>Modify Marketing</h2>
+      <h2>Modify Yarn Description</h2>
         <ol class="breadcrumb">
           <li>
             <a href="#!/">Home</a>
           </li>
           <li>
-            <a href="#!/marketings">Marketing</a>
+            <a href="#!/yarn-descriptions">YarnDescription</a>
           </li>
           <li class="active">
-            <strong>Modify Marketing</strong>
+            <strong>Modify Yarn Description</strong>
           </li> 
         </ol>            
     </div>
@@ -25,14 +25,14 @@
               <div class="col-md-3 form-group">
                 <label class="control-label" for="code">Code</label>
                 <div class="controls">
-                  <input type="Text" data-ng-model="marketing.code" id="code" class="form-control" placeholder="" required />
+                  <input type="Text" data-ng-model="yarndescription.code" id="code" class="form-control" placeholder="" required />
                 </div>
               </div>    
             
               <div class="col-md-3 form-group">
-                <label class="control-label" for="nameofthemarketing">Name Of the Marketing</label>
+                <label class="control-label" for="yarnDescription">Yarn Description</label>
                 <div class="controls">
-                  <input type="Text" data-ng-model="marketing.nameOftheMarketing" id="nameofthemarketing" class="form-control" placeholder="" required />
+                  <input type="Text" data-ng-model="yarndescription.yarnDescription" id="yarnDescription" class="form-control" placeholder="" required />
                 </div>
               </div>    
             

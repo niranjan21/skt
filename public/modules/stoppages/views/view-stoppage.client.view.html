@@ -1,25 +1,25 @@
-<section data-ng-controller="MarketingsController" data-ng-init="findOne()">
+<section data-ng-controller="StoppagesController" data-ng-init="findOne()">
   <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-12">
-      <h2>View Marketing</h2>
+      <h2>View Stoppages</h2>
         <ol class="breadcrumb">
           <li>
             <a href="#!/">Home</a>
           </li>
           <li>
-            <a href="#!/marketings">Marketing</a>
+            <a href="#!/stoppages">Stoppage</a>
           </li>
           <li class="active">
-            <strong>View Marketing</strong>
+            <strong>View Stoppages</strong>
           </li> 
         </ol>            
     </div>
   </div>
   <!-- general form elements -->
-  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == marketing.user._id))">
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == stoppage.user._id))">
     <div class="ibox-content">    
       <div class="pull-right" >
-        <a class="btn btn-primary" href="/#!/marketings/{{marketing._id}}/edit">
+        <a class="btn btn-primary" href="/#!/stoppages/{{stoppage._id}}/edit">
           <i class="glyphicon glyphicon-edit"></i>
         </a>
         <a class="btn btn-primary" data-ng-click="remove();">
@@ -30,12 +30,16 @@
         <div class="col-md-4">
           <dl class="dl-horizontal"> 
             
-                
-                 <dt>Code </dt><dd>{{ marketing.code }}</dd>
+              
+                 <dt>Date </dt><dd>{{ stoppage.date | date }}</dd>
               
             
                 
-                 <dt>Name Of the Marketing </dt><dd>{{ marketing.nameOftheMarketing }}</dd>
+                 <dt>Code </dt><dd>{{ stoppage.code }}</dd>
+              
+            
+                
+                 <dt>Stoppage Reason </dt><dd>{{ stoppage.stoppageReason }}</dd>
               
             
           </dl>

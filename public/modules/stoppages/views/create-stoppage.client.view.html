@@ -1,16 +1,16 @@
-<section data-ng-controller="MarketingsController" data-ng-init="findOne()">
+<section data-ng-controller="StoppagesController">
   <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-12">
-      <h2>Modify Marketing</h2>
+      <h2>New Stoppages</h2>
         <ol class="breadcrumb">
           <li>
             <a href="#!/">Home</a>
           </li>
           <li>
-            <a href="#!/marketings">Marketing</a>
+            <a href="#!/stoppages">Stoppage</a>
           </li>
           <li class="active">
-            <strong>Modify Marketing</strong>
+            <strong>New Stoppages</strong>
           </li> 
         </ol>            
     </div>
@@ -18,31 +18,38 @@
   <div class="ibox float-e-margins">
     <div class="ibox-content">
       <div class="row">
-        <form data-ng-submit="update()" novalidate>
+        <form data-ng-submit="create()" novalidate>
           <fieldset>
             <div class="row">
             
               <div class="col-md-3 form-group">
-                <label class="control-label" for="code">Code</label>
+                <label class="control-label" for="date">Date</label>
                 <div class="controls">
-                  <input type="Text" data-ng-model="marketing.code" id="code" class="form-control" placeholder="" required />
+                  <input type="Date" data-ng-model="date" id="date" class="form-control" placeholder="" required />
                 </div>
               </div>    
             
               <div class="col-md-3 form-group">
-                <label class="control-label" for="nameofthemarketing">Name Of the Marketing</label>
+                <label class="control-label" for="code">Code</label>
                 <div class="controls">
-                  <input type="Text" data-ng-model="marketing.nameOftheMarketing" id="nameofthemarketing" class="form-control" placeholder="" required />
+                  <input type="Text" data-ng-model="code" id="code" class="form-control" placeholder="" required />
                 </div>
               </div>    
             
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="stoppageReason">Stoppage Reason</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="stoppageReason" id="stoppageReason" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
             </div>
             <div class="row">
               <div data-ng-show="error" class="text-danger">
                 <strong data-ng-bind="error"></strong>
               </div>               
               <div class="col-md-2 form-group">
-                <input type="submit" value="Update" class="btn btn-primary" />
+                <input type="submit" class="btn btn-primary" />
               </div>              
             </div>
           </fieldset>

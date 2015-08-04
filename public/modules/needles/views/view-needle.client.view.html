@@ -1,25 +1,25 @@
-<section data-ng-controller="MarketingsController" data-ng-init="findOne()">
+<section data-ng-controller="NeedlesController" data-ng-init="findOne()">
   <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-12">
-      <h2>View Marketing</h2>
+      <h2>View Needle</h2>
         <ol class="breadcrumb">
           <li>
             <a href="#!/">Home</a>
           </li>
           <li>
-            <a href="#!/marketings">Marketing</a>
+            <a href="#!/needles">Needle</a>
           </li>
           <li class="active">
-            <strong>View Marketing</strong>
+            <strong>View Needle</strong>
           </li> 
         </ol>            
     </div>
   </div>
   <!-- general form elements -->
-  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == marketing.user._id))">
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == needle.user._id))">
     <div class="ibox-content">    
       <div class="pull-right" >
-        <a class="btn btn-primary" href="/#!/marketings/{{marketing._id}}/edit">
+        <a class="btn btn-primary" href="/#!/needles/{{needle._id}}/edit">
           <i class="glyphicon glyphicon-edit"></i>
         </a>
         <a class="btn btn-primary" data-ng-click="remove();">
@@ -31,11 +31,11 @@
           <dl class="dl-horizontal"> 
             
                 
-                 <dt>Code </dt><dd>{{ marketing.code }}</dd>
+                 <dt>Code </dt><dd>{{ needle.code }}</dd>
               
             
                 
-                 <dt>Name Of the Marketing </dt><dd>{{ marketing.nameOftheMarketing }}</dd>
+                 <dt>Needle Name </dt><dd>{{ needle.needleName }}</dd>
               
             
           </dl>

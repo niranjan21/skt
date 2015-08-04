@@ -7,19 +7,24 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 /**
- * Marketing Schema
+ * Stoppage Schema
  */
-var MarketingSchema = new Schema({
+var StoppageSchema = new Schema({
 	
+  
+  date: {
+		type: Date,
+		required: 'Please fill date name'
+	},
   
   code: {
 		type: String,
 		required: 'Please fill code name'
 	},
   
-  nameOftheMarketing: {
+  stoppageReason: {
 		type: String,
-		required: 'Please fill nameOftheMarketing name'
+		required: 'Please fill stoppageReason name'
 	},
   
   
@@ -33,4 +38,4 @@ var MarketingSchema = new Schema({
 	}
 });
 
-mongoose.model('Marketing', MarketingSchema);
+mongoose.model('Stoppage', StoppageSchema);

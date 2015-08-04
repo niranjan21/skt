@@ -7,9 +7,9 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 /**
- * Marketing Schema
+ * Mill Schema
  */
-var MarketingSchema = new Schema({
+var MillSchema = new Schema({
 	
   
   code: {
@@ -17,9 +17,9 @@ var MarketingSchema = new Schema({
 		required: 'Please fill code name'
 	},
   
-  nameOftheMarketing: {
+  millName: {
 		type: String,
-		required: 'Please fill nameOftheMarketing name'
+		required: 'Please fill millName name'
 	},
   
   
@@ -33,4 +33,4 @@ var MarketingSchema = new Schema({
 	}
 });
 
-mongoose.model('Marketing', MarketingSchema);
+mongoose.model('Mill', MillSchema);

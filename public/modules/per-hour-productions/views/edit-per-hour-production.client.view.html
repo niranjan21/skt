@@ -1,0 +1,74 @@
+<section data-ng-controller="PerHourProductionsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify Per Hour Production</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/per-hour-productions">PerHourProduction</a>
+          </li>
+          <li class="active">
+            <strong>Modify Per Hour Production</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="dia">DIA</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="perhourproduction.dia" id="dia" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="count">Count</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="perhourproduction.count" id="count" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="perHourProductionKgs">Per Hour Production Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="perhourproduction.perHourProductionKgs" id="perHourProductionKgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="shift">Shift</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="perhourproduction.shift" id="shift" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="perhourproduction.date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

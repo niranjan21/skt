@@ -12,7 +12,7 @@ angular.module('marketings').controller('MarketingsController', ['$scope', '$sta
         
         code: this.code,
         
-        nameoftheMarketing: this.nameoftheMarketing,
+        nameOftheMarketing: this.nameOftheMarketing,
               
         created: Date.now
   

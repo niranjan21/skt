@@ -103,6 +103,20 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'master', 'Marketing', 'marketings');
       
+      Menus.addSubMenuItem('topbar', 'master', 'Mill', 'mills');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Needle', 'needles');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Party Allot', 'party-allots');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Party Master', 'party-masters');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Per Hour Production', 'per-hour-productions');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Stoppages', 'stoppages');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Yarn Description', 'yarn-descriptions');
+      
     
 	}
 ]);
