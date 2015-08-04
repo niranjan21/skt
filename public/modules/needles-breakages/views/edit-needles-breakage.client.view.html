@@ -1,0 +1,88 @@
+<section data-ng-controller="NeedlesBreakagesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify Needles Breakage</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/needles-breakages">NeedlesBreakage</a>
+          </li>
+          <li class="active">
+            <strong>Modify Needles Breakage</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="needlesbreakage.date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="shift">Shift</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="needlesbreakage.shift" id="shift" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="machineCode">Machine Code</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="needlesbreakage.machineCode" id="machineCode" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="employee">Employee</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="needlesbreakage.employee" id="employee" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="needleType">Needle Type</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="needlesbreakage.needleType" id="needleType" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="brokenNeedles">Broken Needles</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="needlesbreakage.brokenNeedles" id="brokenNeedles" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="remarks">Remarks</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="needlesbreakage.remarks" id="remarks" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

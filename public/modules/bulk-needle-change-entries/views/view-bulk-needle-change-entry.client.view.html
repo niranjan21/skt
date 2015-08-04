@@ -1,0 +1,66 @@
+<section data-ng-controller="BulkNeedleChangeEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Bulk Needle Change Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/bulk-needle-change-entries">BulkNeedleChangeEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Bulk Needle Change Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == bulkneedlechangeentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/bulk-needle-change-entries/{{bulkneedlechangeentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Machine Code </dt><dd>{{ bulkneedlechangeentry.machineCode }}</dd>
+              
+            
+                
+                 <dt>Machine Make </dt><dd>{{ bulkneedlechangeentry.machineMake }}</dd>
+              
+            
+                
+                 <dt>DIA </dt><dd>{{ bulkneedlechangeentry.dia }}</dd>
+              
+            
+                
+                 <dt>Mark </dt><dd>{{ bulkneedlechangeentry.mark }}</dd>
+              
+            
+              
+                 <dt>Last Bulk Needlechanged </dt><dd>{{ bulkneedlechangeentry.lastBulkNeedlechanged | date }}</dd>
+              
+            
+                
+                 <dt>Allowed Kgs </dt><dd>{{ bulkneedlechangeentry.allowedKgs }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ bulkneedlechangeentry.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

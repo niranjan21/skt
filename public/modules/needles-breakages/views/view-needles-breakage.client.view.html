@@ -1,0 +1,66 @@
+<section data-ng-controller="NeedlesBreakagesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Needles Breakage</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/needles-breakages">NeedlesBreakage</a>
+          </li>
+          <li class="active">
+            <strong>View Needles Breakage</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == needlesbreakage.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/needles-breakages/{{needlesbreakage._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+              
+                 <dt>Date </dt><dd>{{ needlesbreakage.date | date }}</dd>
+              
+            
+                
+                 <dt>Shift </dt><dd>{{ needlesbreakage.shift }}</dd>
+              
+            
+                
+                 <dt>Machine Code </dt><dd>{{ needlesbreakage.machineCode }}</dd>
+              
+            
+                
+                 <dt>Employee </dt><dd>{{ needlesbreakage.employee }}</dd>
+              
+            
+                
+                 <dt>Needle Type </dt><dd>{{ needlesbreakage.needleType }}</dd>
+              
+            
+                
+                 <dt>Broken Needles </dt><dd>{{ needlesbreakage.brokenNeedles }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ needlesbreakage.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

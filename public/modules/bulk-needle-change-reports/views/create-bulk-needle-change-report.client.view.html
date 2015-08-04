@@ -1,0 +1,95 @@
+<section data-ng-controller="BulkNeedleChangeReportsController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Bulk Needle Change Report</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/bulk-needle-change-reports">BulkNeedleChangeReport</a>
+          </li>
+          <li class="active">
+            <strong>New Bulk Needle Change Report</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="machineNumber">Machine Number</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="machineNumber" id="machineNumber" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="machineMake">Machine Make</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="machineMake" id="machineMake" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="dia">DIA</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="dia" id="dia" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="lastbulkneedlechangeddate">Last Bulk Needle Changed Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="lastBulkNeedlechangedDate" id="lastbulkneedlechangeddate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="allowedProductionQuantity">Allowed Production Quantity</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="allowedProductionQuantity" id="allowedProductionQuantity" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="actualproductionquantity">Actual Production Quantity</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="actualProductionQuantity" id="actualproductionquantity" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="balanceqty">Balance Qty</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="balanceQty" id="balanceqty" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="remarks">Remarks</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="remarks" id="remarks" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

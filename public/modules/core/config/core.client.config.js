@@ -118,5 +118,16 @@ angular.module('core').run(['Menus',
       Menus.addSubMenuItem('topbar', 'master', 'Yarn Description', 'yarn-descriptions');
       
     
+      Menus.addMenuItem('topbar', 'Needles', 'needles', 'dropdown');
+      
+      Menus.addSubMenuItem('topbar', 'needles', 'Bulk Needle Change Entry', 'bulk-needle-change-entries');
+      
+      Menus.addSubMenuItem('topbar', 'needles', 'Bulk Needle Change Report', 'bulk-needle-change-reports');
+      
+      Menus.addSubMenuItem('topbar', 'needles', 'Needles Breakage', 'needles-breakages');
+      
+      Menus.addSubMenuItem('topbar', 'needles', 'Needles Inward Entry', 'needles-inward-entries');
+      
+    
 	}
 ]);
