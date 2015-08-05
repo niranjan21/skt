@@ -1,0 +1,186 @@
+<section data-ng-controller="ProductionParametersController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify Production Parameter</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/production-parameters">ProductionParameter</a>
+          </li>
+          <li class="active">
+            <strong>Modify Production Parameter</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobNo">Job No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productionparameter.jobNo" id="jobNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="productionparameter.date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="party">Party</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productionparameter.party" id="party" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sno">Sno</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionparameter.sno" id="sno" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="design">Design</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productionparameter.design" id="design" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="colour">Colour</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productionparameter.colour" id="colour" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="rate">Rate</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionparameter.rate" id="rate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="texture">Texture</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productionparameter.texture" id="texture" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="gsm">Gsm</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionparameter.gsm" id="gsm" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="lLength">L Length</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionparameter.lLength" id="lLength" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="gG">G G</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionparameter.gG" id="gG" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="mill">Mill</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productionparameter.mill" id="mill" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="count">Count</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productionparameter.count" id="count" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="dia">Dia</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionparameter.dia" id="dia" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="programmeQty">Programme Qty</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionparameter.programmeQty" id="programmeQty" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="averageProductionPerHour">Average Production Per Hour</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionparameter.averageProductionPerHour" id="averageProductionPerHour" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="rpm">Rpm</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionparameter.rpm" id="rpm" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="counting">Counting</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productionparameter.counting" id="counting" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="feeder">Feeder</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productionparameter.feeder" id="feeder" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="rollWeight">Roll Weight</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionparameter.rollWeight" id="rollWeight" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="remarks">Remarks</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="productionparameter.remarks" id="remarks" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

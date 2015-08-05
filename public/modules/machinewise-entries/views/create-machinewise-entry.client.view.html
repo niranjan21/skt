@@ -1,0 +1,151 @@
+<section data-ng-controller="MachinewiseEntriesController">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>New Machinewise Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/machinewise-entries">MachinewiseEntry</a>
+          </li>
+          <li class="active">
+            <strong>New Machinewise Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="create()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="shift">Shift</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="shift" id="shift" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="machineNo">Machine No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="machineNo" id="machineNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="dia">Dia</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="dia" id="dia" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="make">Make</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="make" id="make" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sNo">S No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="sNo" id="sNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobNo">Job No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="jobNo" id="jobNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="party">Party</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="party" id="party" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="operator">Operator</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="operator" id="operator" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="fabric">Fabric</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabric" id="fabric" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="requirement">Requirement</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="requirement" id="requirement" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="kgs">Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="kgs" id="kgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="production">Production</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="production" id="production" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="rolls">Rolls</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="rolls" id="rolls" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="productionKgs">Production Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="productionKgs" id="productionKgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="remarks">Remarks</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="remarks" id="remarks" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+                 
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

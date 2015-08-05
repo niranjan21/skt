@@ -1,0 +1,165 @@
+<section data-ng-controller="RollwiseEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify Rollwise Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/rollwise-entries">RollwiseEntry</a>
+          </li>
+          <li class="active">
+            <strong>Modify Rollwise Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="rollwiseentry.date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="shift">Shift</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.shift" id="shift" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="machineNo">Machine No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.machineNo" id="machineNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="dia">Dia</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="rollwiseentry.dia" id="dia" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="make">Make</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.make" id="make" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sNo">S No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="rollwiseentry.sNo" id="sNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobNo">Job No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.jobNo" id="jobNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="party">Party</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.party" id="party" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="fabric">Fabric</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.fabric" id="fabric" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="operator">Operator</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.operator" id="operator" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="rollNo">Roll No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="rollwiseentry.rollNo" id="rollNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="weight">Weight</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="rollwiseentry.weight" id="weight" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="holes">Holes</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.holes" id="holes" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="lycraCut">Lycra Cut</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.lycraCut" id="lycraCut" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="puVari">Pu Vari</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.puVari" id="puVari" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="shutoff">Shutoff</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.shutoff" id="shutoff" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="needleLine">Needle Line</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.needleLine" id="needleLine" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="remarks">Remarks</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="rollwiseentry.remarks" id="remarks" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

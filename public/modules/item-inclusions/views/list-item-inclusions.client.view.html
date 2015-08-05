@@ -1,0 +1,112 @@
+<section data-ng-controller="ItemInclusionsController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List Item Inclusions</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List Item Inclusions</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!iteminclusions.$resolved || iteminclusions.length">
+    No ItemInclusions yet, why don't you <a href="/#!/item-inclusions/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="iteminclusions.length>0">
+    <div class="ibox-title">
+      <h5>ItemInclusions ({{iteminclusions.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/item-inclusions/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search iteminclusion" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>Job No</th>
+              
+              <th>Date</th>
+              
+              <th>Party</th>
+              
+              <th>Order No</th>
+              
+              <th>S No</th>
+              
+              <th>Item Description</th>
+              
+              <th>Bags</th>
+              
+              <th>Net Kgs</th>
+              
+              <th>Gross Kgs</th>
+              
+              <th>Remarks</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="iteminclusion in iteminclusions | filter: searchtext">
+              
+                
+              <td>{{ iteminclusion.jobNo }}</td>
+              
+              
+              
+              <td>{{ iteminclusion.date | date }}</td>
+              
+              
+                
+              <td>{{ iteminclusion.party }}</td>
+              
+              
+                
+              <td>{{ iteminclusion.orderNo }}</td>
+              
+              
+                
+              <td>{{ iteminclusion.sNo }}</td>
+              
+              
+                
+              <td>{{ iteminclusion.itemDescription }}</td>
+              
+              
+                
+              <td>{{ iteminclusion.bags }}</td>
+              
+              
+                
+              <td>{{ iteminclusion.netKgs }}</td>
+              
+              
+                
+              <td>{{ iteminclusion.grossKgs }}</td>
+              
+              
+                
+              <td>{{ iteminclusion.remarks }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/item-inclusions/{{iteminclusion._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

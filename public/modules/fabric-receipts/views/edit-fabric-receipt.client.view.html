@@ -1,0 +1,172 @@
+<section data-ng-controller="FabricReceiptsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify Fabric Receipt</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/fabric-receipts">FabricReceipt</a>
+          </li>
+          <li class="active">
+            <strong>Modify Fabric Receipt</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobNo">Job No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreceipt.jobNo" id="jobNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="party">Party</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreceipt.party" id="party" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="partyDeliveryChallanNo">Party Delivery Challan No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreceipt.partyDeliveryChallanNo" id="partyDeliveryChallanNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="deliveryChallanDate">Delivery Challan Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="fabricreceipt.deliveryChallanDate" id="deliveryChallanDate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sNo">S No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreceipt.sNo" id="sNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="description">Description</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreceipt.description" id="description" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="colour">Colour</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreceipt.colour" id="colour" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="code">Code</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreceipt.code" id="code" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="rate">Rate</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreceipt.rate" id="rate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="gsm">GSM</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreceipt.gSM" id="gsm" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="lLength">L Length</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreceipt.lLength" id="lLength" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="gg">GG</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreceipt.gG" id="gg" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="mill">Mill</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreceipt.mill" id="mill" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="count">Count</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreceipt.count" id="count" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="dia">DIA</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreceipt.dIA" id="dia" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="balanceQtyKgs">Balance Qty Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreceipt.balanceQtyKgs" id="balanceQtyKgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="receivedQtyRoll">Received Qty Roll</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreceipt.receivedQtyRoll" id="receivedQtyRoll" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="receivedQtyKgs">Received Qty Kgs</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="fabricreceipt.receivedQtyKgs" id="receivedQtyKgs" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="remarks">Remarks</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="fabricreceipt.remarks" id="remarks" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

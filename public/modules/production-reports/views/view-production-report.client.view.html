@@ -1,0 +1,102 @@
+<section data-ng-controller="ProductionReportsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Production Report</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/production-reports">ProductionReport</a>
+          </li>
+          <li class="active">
+            <strong>View Production Report</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == productionreport.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/production-reports/{{productionreport._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+              
+                 <dt>Date </dt><dd>{{ productionreport.date | date }}</dd>
+              
+            
+                
+                 <dt>Shift </dt><dd>{{ productionreport.shift }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ productionreport.sNo }}</dd>
+              
+            
+                
+                 <dt>Machine No </dt><dd>{{ productionreport.machineNo }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ productionreport.dia }}</dd>
+              
+            
+                
+                 <dt>Make </dt><dd>{{ productionreport.make }}</dd>
+              
+            
+                
+                 <dt>Job Order No </dt><dd>{{ productionreport.jobOrderNo }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ productionreport.party }}</dd>
+              
+            
+                
+                 <dt>Operator </dt><dd>{{ productionreport.operator }}</dd>
+              
+            
+                
+                 <dt>Fabric </dt><dd>{{ productionreport.fabric }}</dd>
+              
+            
+                
+                 <dt>Gsm </dt><dd>{{ productionreport.gsm }}</dd>
+              
+            
+                
+                 <dt>L Length </dt><dd>{{ productionreport.lLength }}</dd>
+              
+            
+                
+                 <dt>Production </dt><dd>{{ productionreport.production }}</dd>
+              
+            
+                
+                 <dt>Rolls </dt><dd>{{ productionreport.rolls }}</dd>
+              
+            
+                
+                 <dt>Kgs </dt><dd>{{ productionreport.kgs }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ productionreport.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

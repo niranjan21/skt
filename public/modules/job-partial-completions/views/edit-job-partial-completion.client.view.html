@@ -1,0 +1,137 @@
+<section data-ng-controller="JobPartialCompletionsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>Modify Job Partial Completion</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/job-partial-completions">JobPartialCompletion</a>
+          </li>
+          <li class="active">
+            <strong>Modify Job Partial Completion</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-content">
+      <div class="row">
+        <form data-ng-submit="update()" novalidate>
+          <fieldset>
+            <div class="row">
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="jobNo">Job No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="jobpartialcompletion.jobNo" id="jobNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="jobpartialcompletion.date" id="date" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="party">Party</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="jobpartialcompletion.party" id="party" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="expectedDeliveryDate">Expected Delivery Date</label>
+                <div class="controls">
+                  <input type="Date" data-ng-model="jobpartialcompletion.expectedDeliveryDate" id="expectedDeliveryDate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="orderNo">Order No</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="jobpartialcompletion.orderNo" id="orderNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="marketingBy">Marketing By</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="jobpartialcompletion.marketingBy" id="marketingBy" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="sNo">S No</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="jobpartialcompletion.sNo" id="sNo" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="design">Design</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="jobpartialcompletion.design" id="design" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="colour">Colour</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="jobpartialcompletion.colour" id="colour" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="rate">Rate</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="jobpartialcompletion.rate" id="rate" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="dIA">D Ia</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="jobpartialcompletion.dIA" id="dIA" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="requiredQty">Required Qty</label>
+                <div class="controls">
+                  <input type="Number" data-ng-model="jobpartialcompletion.requiredQty" id="requiredQty" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="closedOrOpen">Closed Or Open</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="jobpartialcompletion.closedOrOpen" id="closedOrOpen" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+              <div class="col-md-3 form-group">
+                <label class="control-label" for="remarks">Remarks</label>
+                <div class="controls">
+                  <input type="Text" data-ng-model="jobpartialcompletion.remarks" id="remarks" class="form-control" placeholder="" required />
+                </div>
+              </div>    
+            
+            </div>
+            <div class="row">
+              <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+              </div>               
+              <div class="col-md-2 form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+              </div>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,110 @@
+<section data-ng-controller="RollwiseEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Rollwise Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/rollwise-entries">RollwiseEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Rollwise Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == rollwiseentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/rollwise-entries/{{rollwiseentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+              
+                 <dt>Date </dt><dd>{{ rollwiseentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Shift </dt><dd>{{ rollwiseentry.shift }}</dd>
+              
+            
+                
+                 <dt>Machine No </dt><dd>{{ rollwiseentry.machineNo }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ rollwiseentry.dia }}</dd>
+              
+            
+                
+                 <dt>Make </dt><dd>{{ rollwiseentry.make }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ rollwiseentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ rollwiseentry.jobNo }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ rollwiseentry.party }}</dd>
+              
+            
+                
+                 <dt>Fabric </dt><dd>{{ rollwiseentry.fabric }}</dd>
+              
+            
+                
+                 <dt>Operator </dt><dd>{{ rollwiseentry.operator }}</dd>
+              
+            
+                
+                 <dt>Roll No </dt><dd>{{ rollwiseentry.rollNo }}</dd>
+              
+            
+                
+                 <dt>Weight </dt><dd>{{ rollwiseentry.weight }}</dd>
+              
+            
+                
+                 <dt>Holes </dt><dd>{{ rollwiseentry.holes }}</dd>
+              
+            
+                
+                 <dt>Lycra Cut </dt><dd>{{ rollwiseentry.lycraCut }}</dd>
+              
+            
+                
+                 <dt>Pu Vari </dt><dd>{{ rollwiseentry.puVari }}</dd>
+              
+            
+                
+                 <dt>Shutoff </dt><dd>{{ rollwiseentry.shutoff }}</dd>
+              
+            
+                
+                 <dt>Needle Line </dt><dd>{{ rollwiseentry.needleLine }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ rollwiseentry.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

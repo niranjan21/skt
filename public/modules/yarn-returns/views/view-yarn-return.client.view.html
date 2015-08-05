@@ -1,0 +1,86 @@
+<section data-ng-controller="YarnReturnsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Yarn Return</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/yarn-returns">YarnReturn</a>
+          </li>
+          <li class="active">
+            <strong>View Yarn Return</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == yarnreturn.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/yarn-returns/{{yarnreturn._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Job No </dt><dd>{{ yarnreturn.jobNo }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ yarnreturn.party }}</dd>
+              
+            
+                
+                 <dt>Party Dcno </dt><dd>{{ yarnreturn.partyDcno }}</dd>
+              
+            
+              
+                 <dt>Dcdate </dt><dd>{{ yarnreturn.dcdate | date }}</dd>
+              
+            
+                
+                 <dt>Our Delivery Challan </dt><dd>{{ yarnreturn.ourDeliveryChallan }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ yarnreturn.sNo }}</dd>
+              
+            
+                
+                 <dt>Yarn Description </dt><dd>{{ yarnreturn.yarnDescription }}</dd>
+              
+            
+                
+                 <dt>Sent Bags </dt><dd>{{ yarnreturn.sentBags }}</dd>
+              
+            
+                
+                 <dt>Sent Kgs </dt><dd>{{ yarnreturn.sentKgs }}</dd>
+              
+            
+                
+                 <dt>Return Bags </dt><dd>{{ yarnreturn.returnBags }}</dd>
+              
+            
+                
+                 <dt>Return Kgs </dt><dd>{{ yarnreturn.returnKgs }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ yarnreturn.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

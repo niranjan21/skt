@@ -1,0 +1,74 @@
+<section data-ng-controller="RollQualityControlEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Roll Quality Control Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/roll-quality-control-entries">RollQualityControlEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Roll Quality Control Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == rollqualitycontrolentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/roll-quality-control-entries/{{rollqualitycontrolentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+              
+                 <dt>Date </dt><dd>{{ rollqualitycontrolentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Shift </dt><dd>{{ rollqualitycontrolentry.shift }}</dd>
+              
+            
+                
+                 <dt>Machine No </dt><dd>{{ rollqualitycontrolentry.machineNo }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ rollqualitycontrolentry.dia }}</dd>
+              
+            
+                
+                 <dt>Make </dt><dd>{{ rollqualitycontrolentry.make }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ rollqualitycontrolentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ rollqualitycontrolentry.jobNo }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ rollqualitycontrolentry.party }}</dd>
+              
+            
+                
+                 <dt>Fabric </dt><dd>{{ rollqualitycontrolentry.fabric }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

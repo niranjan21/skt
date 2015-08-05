@@ -1,0 +1,102 @@
+<section data-ng-controller="MachinewiseEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Machinewise Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/machinewise-entries">MachinewiseEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Machinewise Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == machinewiseentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/machinewise-entries/{{machinewiseentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+              
+                 <dt>Date </dt><dd>{{ machinewiseentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Shift </dt><dd>{{ machinewiseentry.shift }}</dd>
+              
+            
+                
+                 <dt>Machine No </dt><dd>{{ machinewiseentry.machineNo }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ machinewiseentry.dia }}</dd>
+              
+            
+                
+                 <dt>Make </dt><dd>{{ machinewiseentry.make }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ machinewiseentry.sNo }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ machinewiseentry.jobNo }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ machinewiseentry.party }}</dd>
+              
+            
+                
+                 <dt>Operator </dt><dd>{{ machinewiseentry.operator }}</dd>
+              
+            
+                
+                 <dt>Fabric </dt><dd>{{ machinewiseentry.fabric }}</dd>
+              
+            
+                
+                 <dt>Requirement </dt><dd>{{ machinewiseentry.requirement }}</dd>
+              
+            
+                
+                 <dt>Kgs </dt><dd>{{ machinewiseentry.kgs }}</dd>
+              
+            
+                
+                 <dt>Production </dt><dd>{{ machinewiseentry.production }}</dd>
+              
+            
+                
+                 <dt>Rolls </dt><dd>{{ machinewiseentry.rolls }}</dd>
+              
+            
+                
+                 <dt>Production Kgs </dt><dd>{{ machinewiseentry.productionKgs }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ machinewiseentry.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

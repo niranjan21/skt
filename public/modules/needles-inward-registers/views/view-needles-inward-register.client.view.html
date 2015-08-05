@@ -1,0 +1,66 @@
+<section data-ng-controller="NeedlesInwardRegistersController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Needles Inward Register</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/needles-inward-registers">NeedlesInwardRegister</a>
+          </li>
+          <li class="active">
+            <strong>View Needles Inward Register</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == needlesinwardregister.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/needles-inward-registers/{{needlesinwardregister._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Receipt No </dt><dd>{{ needlesinwardregister.receiptNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ needlesinwardregister.date | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ needlesinwardregister.party }}</dd>
+              
+            
+                
+                 <dt>Delivery Challan No </dt><dd>{{ needlesinwardregister.deliveryChallanNo }}</dd>
+              
+            
+                
+                 <dt>Item Description </dt><dd>{{ needlesinwardregister.itemDescription }}</dd>
+              
+            
+                
+                 <dt>Received Quantity </dt><dd>{{ needlesinwardregister.receivedQuantity }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ needlesinwardregister.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

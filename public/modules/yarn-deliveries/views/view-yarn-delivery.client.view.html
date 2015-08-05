@@ -1,0 +1,118 @@
+<section data-ng-controller="YarnDeliveriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Yarn Delivery</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/yarn-deliveries">YarnDelivery</a>
+          </li>
+          <li class="active">
+            <strong>View Yarn Delivery</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == yarndelivery.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/yarn-deliveries/{{yarndelivery._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>D Cno </dt><dd>{{ yarndelivery.dCNo }}</dd>
+              
+            
+              
+                 <dt>D Cdate </dt><dd>{{ yarndelivery.dCDate | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ yarndelivery.party }}</dd>
+              
+            
+                
+                 <dt>Job No </dt><dd>{{ yarndelivery.jobNo }}</dd>
+              
+            
+              
+                 <dt>Job Date </dt><dd>{{ yarndelivery.jobDate | date }}</dd>
+              
+            
+                
+                 <dt>Knitter </dt><dd>{{ yarndelivery.knitter }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ yarndelivery.sNo }}</dd>
+              
+            
+                
+                 <dt>Description </dt><dd>{{ yarndelivery.description }}</dd>
+              
+            
+                
+                 <dt>Colour </dt><dd>{{ yarndelivery.colour }}</dd>
+              
+            
+                
+                 <dt>Code </dt><dd>{{ yarndelivery.code }}</dd>
+              
+            
+                
+                 <dt>Rate </dt><dd>{{ yarndelivery.rate }}</dd>
+              
+            
+                
+                 <dt>G Sm </dt><dd>{{ yarndelivery.gSM }}</dd>
+              
+            
+                
+                 <dt>L Length </dt><dd>{{ yarndelivery.lLength }}</dd>
+              
+            
+                
+                 <dt>G G </dt><dd>{{ yarndelivery.gG }}</dd>
+              
+            
+                
+                 <dt>Mill </dt><dd>{{ yarndelivery.mill }}</dd>
+              
+            
+                
+                 <dt>Count </dt><dd>{{ yarndelivery.count }}</dd>
+              
+            
+                
+                 <dt>D Ia </dt><dd>{{ yarndelivery.dIA }}</dd>
+              
+            
+                
+                 <dt>Programme Kgs </dt><dd>{{ yarndelivery.programmeKgs }}</dd>
+              
+            
+                
+                 <dt>Required Kgs </dt><dd>{{ yarndelivery.requiredKgs }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ yarndelivery.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

@@ -1,0 +1,94 @@
+<section data-ng-controller="JobPartialCompletionsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Job Partial Completion</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/job-partial-completions">JobPartialCompletion</a>
+          </li>
+          <li class="active">
+            <strong>View Job Partial Completion</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == jobpartialcompletion.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/job-partial-completions/{{jobpartialcompletion._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Job No </dt><dd>{{ jobpartialcompletion.jobNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ jobpartialcompletion.date | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ jobpartialcompletion.party }}</dd>
+              
+            
+              
+                 <dt>Expected Delivery Date </dt><dd>{{ jobpartialcompletion.expectedDeliveryDate | date }}</dd>
+              
+            
+                
+                 <dt>Order No </dt><dd>{{ jobpartialcompletion.orderNo }}</dd>
+              
+            
+                
+                 <dt>Marketing By </dt><dd>{{ jobpartialcompletion.marketingBy }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ jobpartialcompletion.sNo }}</dd>
+              
+            
+                
+                 <dt>Design </dt><dd>{{ jobpartialcompletion.design }}</dd>
+              
+            
+                
+                 <dt>Colour </dt><dd>{{ jobpartialcompletion.colour }}</dd>
+              
+            
+                
+                 <dt>Rate </dt><dd>{{ jobpartialcompletion.rate }}</dd>
+              
+            
+                
+                 <dt>D Ia </dt><dd>{{ jobpartialcompletion.dIA }}</dd>
+              
+            
+                
+                 <dt>Required Qty </dt><dd>{{ jobpartialcompletion.requiredQty }}</dd>
+              
+            
+                
+                 <dt>Closed Or Open </dt><dd>{{ jobpartialcompletion.closedOrOpen }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ jobpartialcompletion.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

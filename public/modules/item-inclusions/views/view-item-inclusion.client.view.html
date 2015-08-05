@@ -1,0 +1,78 @@
+<section data-ng-controller="ItemInclusionsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Item Inclusion</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/item-inclusions">ItemInclusion</a>
+          </li>
+          <li class="active">
+            <strong>View Item Inclusion</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == iteminclusion.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/item-inclusions/{{iteminclusion._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Job No </dt><dd>{{ iteminclusion.jobNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ iteminclusion.date | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ iteminclusion.party }}</dd>
+              
+            
+                
+                 <dt>Order No </dt><dd>{{ iteminclusion.orderNo }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ iteminclusion.sNo }}</dd>
+              
+            
+                
+                 <dt>Item Description </dt><dd>{{ iteminclusion.itemDescription }}</dd>
+              
+            
+                
+                 <dt>Bags </dt><dd>{{ iteminclusion.bags }}</dd>
+              
+            
+                
+                 <dt>Net Kgs </dt><dd>{{ iteminclusion.netKgs }}</dd>
+              
+            
+                
+                 <dt>Gross Kgs </dt><dd>{{ iteminclusion.grossKgs }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ iteminclusion.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

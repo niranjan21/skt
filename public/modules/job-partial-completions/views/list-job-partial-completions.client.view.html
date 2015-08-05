@@ -1,0 +1,136 @@
+<section data-ng-controller="JobPartialCompletionsController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List Job Partial Completion</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List Job Partial Completion</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!jobpartialcompletions.$resolved || jobpartialcompletions.length">
+    No JobPartialCompletions yet, why don't you <a href="/#!/job-partial-completions/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="jobpartialcompletions.length>0">
+    <div class="ibox-title">
+      <h5>JobPartialCompletions ({{jobpartialcompletions.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/job-partial-completions/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search jobpartialcompletion" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>Job No</th>
+              
+              <th>Date</th>
+              
+              <th>Party</th>
+              
+              <th>Expected Delivery Date</th>
+              
+              <th>Order No</th>
+              
+              <th>Marketing By</th>
+              
+              <th>S No</th>
+              
+              <th>Design</th>
+              
+              <th>Colour</th>
+              
+              <th>Rate</th>
+              
+              <th>D Ia</th>
+              
+              <th>Required Qty</th>
+              
+              <th>Closed Or Open</th>
+              
+              <th>Remarks</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="jobpartialcompletion in jobpartialcompletions | filter: searchtext">
+              
+                
+              <td>{{ jobpartialcompletion.jobNo }}</td>
+              
+              
+              
+              <td>{{ jobpartialcompletion.date | date }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.party }}</td>
+              
+              
+              
+              <td>{{ jobpartialcompletion.expectedDeliveryDate | date }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.orderNo }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.marketingBy }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.sNo }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.design }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.colour }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.rate }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.dIA }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.requiredQty }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.closedOrOpen }}</td>
+              
+              
+                
+              <td>{{ jobpartialcompletion.remarks }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/job-partial-completions/{{jobpartialcompletion._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

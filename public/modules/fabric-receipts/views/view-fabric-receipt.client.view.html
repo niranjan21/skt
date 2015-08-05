@@ -1,0 +1,114 @@
+<section data-ng-controller="FabricReceiptsController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Fabric Receipt</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/fabric-receipts">FabricReceipt</a>
+          </li>
+          <li class="active">
+            <strong>View Fabric Receipt</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == fabricreceipt.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/fabric-receipts/{{fabricreceipt._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Job No </dt><dd>{{ fabricreceipt.jobNo }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ fabricreceipt.party }}</dd>
+              
+            
+                
+                 <dt>Party Delivery Challan No </dt><dd>{{ fabricreceipt.partyDeliveryChallanNo }}</dd>
+              
+            
+              
+                 <dt>Delivery Challan Date </dt><dd>{{ fabricreceipt.deliveryChallanDate | date }}</dd>
+              
+            
+                
+                 <dt>S No </dt><dd>{{ fabricreceipt.sNo }}</dd>
+              
+            
+                
+                 <dt>Description </dt><dd>{{ fabricreceipt.description }}</dd>
+              
+            
+                
+                 <dt>Colour </dt><dd>{{ fabricreceipt.colour }}</dd>
+              
+            
+                
+                 <dt>Code </dt><dd>{{ fabricreceipt.code }}</dd>
+              
+            
+                
+                 <dt>Rate </dt><dd>{{ fabricreceipt.rate }}</dd>
+              
+            
+                
+                 <dt>GSM </dt><dd>{{ fabricreceipt.gSM }}</dd>
+              
+            
+                
+                 <dt>L Length </dt><dd>{{ fabricreceipt.lLength }}</dd>
+              
+            
+                
+                 <dt>GG </dt><dd>{{ fabricreceipt.gG }}</dd>
+              
+            
+                
+                 <dt>Mill </dt><dd>{{ fabricreceipt.mill }}</dd>
+              
+            
+                
+                 <dt>Count </dt><dd>{{ fabricreceipt.count }}</dd>
+              
+            
+                
+                 <dt>DIA </dt><dd>{{ fabricreceipt.dIA }}</dd>
+              
+            
+                
+                 <dt>Balance Qty Kgs </dt><dd>{{ fabricreceipt.balanceQtyKgs }}</dd>
+              
+            
+                
+                 <dt>Received Qty Roll </dt><dd>{{ fabricreceipt.receivedQtyRoll }}</dd>
+              
+            
+                
+                 <dt>Received Qty Kgs </dt><dd>{{ fabricreceipt.receivedQtyKgs }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ fabricreceipt.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

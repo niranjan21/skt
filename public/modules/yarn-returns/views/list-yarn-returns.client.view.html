@@ -1,0 +1,124 @@
+<section data-ng-controller="YarnReturnsController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List Yarn Returns</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List Yarn Returns</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!yarnreturns.$resolved || yarnreturns.length">
+    No YarnReturns yet, why don't you <a href="/#!/yarn-returns/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="yarnreturns.length>0">
+    <div class="ibox-title">
+      <h5>YarnReturns ({{yarnreturns.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/yarn-returns/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search yarnreturn" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>Job No</th>
+              
+              <th>Party</th>
+              
+              <th>Party Dcno</th>
+              
+              <th>Dcdate</th>
+              
+              <th>Our Delivery Challan</th>
+              
+              <th>S No</th>
+              
+              <th>Yarn Description</th>
+              
+              <th>Sent Bags</th>
+              
+              <th>Sent Kgs</th>
+              
+              <th>Return Bags</th>
+              
+              <th>Return Kgs</th>
+              
+              <th>Remarks</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="yarnreturn in yarnreturns | filter: searchtext">
+              
+                
+              <td>{{ yarnreturn.jobNo }}</td>
+              
+              
+                
+              <td>{{ yarnreturn.party }}</td>
+              
+              
+                
+              <td>{{ yarnreturn.partyDcno }}</td>
+              
+              
+              
+              <td>{{ yarnreturn.dcdate | date }}</td>
+              
+              
+                
+              <td>{{ yarnreturn.ourDeliveryChallan }}</td>
+              
+              
+                
+              <td>{{ yarnreturn.sNo }}</td>
+              
+              
+                
+              <td>{{ yarnreturn.yarnDescription }}</td>
+              
+              
+                
+              <td>{{ yarnreturn.sentBags }}</td>
+              
+              
+                
+              <td>{{ yarnreturn.sentKgs }}</td>
+              
+              
+                
+              <td>{{ yarnreturn.returnBags }}</td>
+              
+              
+                
+              <td>{{ yarnreturn.returnKgs }}</td>
+              
+              
+                
+              <td>{{ yarnreturn.remarks }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/yarn-returns/{{yarnreturn._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

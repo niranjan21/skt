@@ -1,0 +1,90 @@
+<section data-ng-controller="ProductionTestEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Production Test Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/production-test-entries">ProductionTestEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Production Test Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == productiontestentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/production-test-entries/{{productiontestentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Job No </dt><dd>{{ productiontestentry.jobNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ productiontestentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ productiontestentry.party }}</dd>
+              
+            
+                
+                 <dt>Count </dt><dd>{{ productiontestentry.count }}</dd>
+              
+            
+                
+                 <dt>Mill </dt><dd>{{ productiontestentry.mill }}</dd>
+              
+            
+                
+                 <dt>Numberof Cones </dt><dd>{{ productiontestentry.numberofCones }}</dd>
+              
+            
+                
+                 <dt>Gross Weight </dt><dd>{{ productiontestentry.grossWeight }}</dd>
+              
+            
+                
+                 <dt>Net Weight </dt><dd>{{ productiontestentry.netWeight }}</dd>
+              
+            
+                
+                 <dt>Fabric Produced </dt><dd>{{ productiontestentry.fabricProduced }}</dd>
+              
+            
+                
+                 <dt>Balance Yarn Net Weight </dt><dd>{{ productiontestentry.balanceYarnNetWeight }}</dd>
+              
+            
+                
+                 <dt>Shortage Kgs </dt><dd>{{ productiontestentry.shortageKgs }}</dd>
+              
+            
+                
+                 <dt>In Percentage </dt><dd>{{ productiontestentry.inPercentage }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ productiontestentry.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>
