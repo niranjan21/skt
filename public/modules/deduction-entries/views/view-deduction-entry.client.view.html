@@ -1,0 +1,58 @@
+<section data-ng-controller="DeductionEntriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Deduction Entry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/deduction-entries">DeductionEntry</a>
+          </li>
+          <li class="active">
+            <strong>View Deduction Entry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == deductionentry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/deduction-entries/{{deductionentry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+              
+                 <dt>Date </dt><dd>{{ deductionentry.date | date }}</dd>
+              
+            
+                
+                 <dt>Employee Code </dt><dd>{{ deductionentry.employeeCode }}</dd>
+              
+            
+                
+                 <dt>Employee Name </dt><dd>{{ deductionentry.employeeName }}</dd>
+              
+            
+                
+                 <dt>Deduction </dt><dd>{{ deductionentry.deduction }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ deductionentry.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

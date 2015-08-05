@@ -1,0 +1,94 @@
+<section data-ng-controller="OrderEnquiriesController" data-ng-init="findOne()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>View Order Enquiry</h2>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#!/">Home</a>
+          </li>
+          <li>
+            <a href="#!/order-enquiries">OrderEnquiry</a>
+          </li>
+          <li class="active">
+            <strong>View Order Enquiry</strong>
+          </li> 
+        </ol>            
+    </div>
+  </div>
+  <!-- general form elements -->
+  <div class="ibox float-e-margins"  data-ng-show="((authentication.user) && (authentication.user._id == orderenquiry.user._id))">
+    <div class="ibox-content">    
+      <div class="pull-right" >
+        <a class="btn btn-primary" href="/#!/order-enquiries/{{orderenquiry._id}}/edit">
+          <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
+      </div>    
+      <div class="row">
+        <div class="col-md-4">
+          <dl class="dl-horizontal"> 
+            
+                
+                 <dt>Enquiry No </dt><dd>{{ orderenquiry.enquiryNo }}</dd>
+              
+            
+              
+                 <dt>Date </dt><dd>{{ orderenquiry.date | date }}</dd>
+              
+            
+                
+                 <dt>Party </dt><dd>{{ orderenquiry.party }}</dd>
+              
+            
+                
+                 <dt>Concern </dt><dd>{{ orderenquiry.concern }}</dd>
+              
+            
+                
+                 <dt>Order Reference </dt><dd>{{ orderenquiry.orderReference }}</dd>
+              
+            
+                
+                 <dt>Attn </dt><dd>{{ orderenquiry.attn }}</dd>
+              
+            
+                
+                 <dt>Fabric Type </dt><dd>{{ orderenquiry.fabricType }}</dd>
+              
+            
+                
+                 <dt>Receiver </dt><dd>{{ orderenquiry.receiver }}</dd>
+              
+            
+                
+                 <dt>Counts </dt><dd>{{ orderenquiry.counts }}</dd>
+              
+            
+                
+                 <dt>Dia </dt><dd>{{ orderenquiry.dia }}</dd>
+              
+            
+                
+                 <dt>Sampling Charges </dt><dd>{{ orderenquiry.samplingCharges }}</dd>
+              
+            
+                
+                 <dt>Knitting Rate Per Kg </dt><dd>{{ orderenquiry.knittingRatePerKg }}</dd>
+              
+            
+                
+                 <dt>Payment Terms </dt><dd>{{ orderenquiry.paymentTerms }}</dd>
+              
+            
+                
+                 <dt>Remarks </dt><dd>{{ orderenquiry.remarks }}</dd>
+              
+            
+          </dl>
+        </div>
+      </div>
+    </div><!-- /.ibox-content -->
+  </div><!-- /.ibox -->
+<section>

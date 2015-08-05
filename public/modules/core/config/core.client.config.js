@@ -130,7 +130,22 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'needles', 'Needles Inward Register', 'needles-inward-registers');
 
-
+      
+      Menus.addMenuItem('topbar', 'Wages', 'wages', 'dropdown');
+      
+      Menus.addSubMenuItem('topbar', 'wages', 'Allowance Entry', 'allowance-entries');
+      
+      Menus.addSubMenuItem('topbar', 'wages', 'Deduction Entry', 'deduction-entries');
+      
+      Menus.addSubMenuItem('topbar', 'wages', 'Form Jj', 'form-jjs');
+      
+      Menus.addSubMenuItem('topbar', 'wages', 'Order Enquiry', 'order-enquiries');
+      
+      Menus.addSubMenuItem('topbar', 'wages', 'Shift Entry', 'shift-entries');
+      
+      Menus.addSubMenuItem('topbar', 'wages', 'Power And Diesel Consumption Entry', 'power-and-diesel-consumption-entries');
+      
+    
       Menus.addMenuItem('topbar', 'Outside Knitting', 'outsideknitting', 'dropdown');
       
       Menus.addSubMenuItem('topbar', 'outsideknitting', 'Bill Entry', 'bill-entries');
@@ -161,7 +176,6 @@ angular.module('core').run(['Menus',
       Menus.addSubMenuItem('topbar', 'production', 'Roll Quality Control Entry', 'roll-quality-control-entries');
       
       Menus.addSubMenuItem('topbar', 'production', 'Rollwise Entry', 'rollwise-entries');
-       
     
 	}
 ]);

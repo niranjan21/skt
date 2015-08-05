@@ -1,0 +1,136 @@
+<section data-ng-controller="OrderEnquiriesController" data-ng-init="find()">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12">
+      <h2>List Order Enquiry</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#!/">Home</a>
+        </li>
+        <li class="active">
+          <strong>List Order Enquiry</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="alert alert-warning text-center" data-ng-hide="!orderenquiries.$resolved || orderenquiries.length">
+    No OrderEnquiries yet, why don't you <a href="/#!/order-enquiries/create">create one</a>?
+  </div>  
+  <div class="ibox float-e-margins" data-ng-show="orderenquiries.length>0">
+    <div class="ibox-title">
+      <h5>OrderEnquiries ({{orderenquiries.length}})</h5>
+      <div class="ibox-tools">
+        <a href="/#!/order-enquiries/create" class="btn btn-primary btn-xs">Create</a>
+      </div>
+    </div>
+      
+    <div class="ibox-content">
+      <div class="input-group">
+        <input type="text" ng-model="searchtext" placeholder="Search orderenquiry" class="input form-control">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+        </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+          <tr>
+              
+              <th>Enquiry No</th>
+              
+              <th>Date</th>
+              
+              <th>Party</th>
+              
+              <th>Concern</th>
+              
+              <th>Order Reference</th>
+              
+              <th>Attn</th>
+              
+              <th>Fabric Type</th>
+              
+              <th>Receiver</th>
+              
+              <th>Counts</th>
+              
+              <th>Dia</th>
+              
+              <th>Sampling Charges</th>
+              
+              <th>Knitting Rate Per Kg</th>
+              
+              <th>Payment Terms</th>
+              
+              <th>Remarks</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="orderenquiry in orderenquiries | filter: searchtext">
+              
+                
+              <td>{{ orderenquiry.enquiryNo }}</td>
+              
+              
+              
+              <td>{{ orderenquiry.date | date }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.party }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.concern }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.orderReference }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.attn }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.fabricType }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.receiver }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.counts }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.dia }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.samplingCharges }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.knittingRatePerKg }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.paymentTerms }}</td>
+              
+              
+                
+              <td>{{ orderenquiry.remarks }}</td>
+              
+              
+              
+              <td><a class="glyphicon glyphicon-edit" href="/#!/order-enquiries/{{orderenquiry._id}}/edit"></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
