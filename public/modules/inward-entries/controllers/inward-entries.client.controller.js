@@ -12,17 +12,17 @@ angular.module('inward-entries').controller('InwardEntriesController', ['$scope'
         
         receivedFrom: this.receivedFrom,
         
-        goodsReceiptNo: this.goodsReceiptNo,
+        grnno: this.grnno,
         
-        inwardDate: this.inwardDate,
+        date: this.date,
         
-        deliveryChalanNo: this.deliveryChalanNo,
+        deliveryChallanNo: this.deliveryChallanNo,
         
         sNo: this.sNo,
         
-        nameOfTheItem: this.nameOfTheItem,
+        nameoftheItem: this.nameoftheItem,
         
-        uOm: this.uOm,
+        uom: this.uom,
         
         rate: this.rate,
         
@@ -92,7 +92,7 @@ angular.module('inward-entries').controller('InwardEntriesController', ['$scope'
         
         
         
-        data.inwardDate = moment(data.inwardDate).format('YYYY-MM-DD');
+        data.date = moment(data.date).format('YYYY-MM-DD');
         
         
         

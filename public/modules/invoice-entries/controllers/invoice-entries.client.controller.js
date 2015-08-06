@@ -34,7 +34,7 @@ angular.module('invoice-entries').controller('InvoiceEntriesController', ['$scop
         
         rolls: this.rolls,
         
-        quantityinKgs: this.quantityinKgs,
+        quantityInKgs: this.quantityInKgs,
         
         ratePerUnit: this.ratePerUnit,
         

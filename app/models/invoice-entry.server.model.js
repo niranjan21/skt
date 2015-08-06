@@ -72,9 +72,9 @@ var InvoiceEntrySchema = new Schema({
 		required: 'Please fill rolls name'
 	},
   
-  quantityinKgs: {
+  quantityInKgs: {
 		type: Number,
-		required: 'Please fill quantityinKgs name'
+		required: 'Please fill quantityInKgs name'
 	},
   
   ratePerUnit: {

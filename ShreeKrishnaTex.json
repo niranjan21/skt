@@ -2,55 +2,6 @@
   "name": "ShreeKrishnaTex",
   "models": [
     {
-      "name": "InwardEntry",
-      "pluralname": "InwardEntries",
-      "paramname": "inward-entry",
-      "parampluralname": "inward-entries",
-      "camelcasename": "inwardEntry",
-      "elements": [
-        {
-          "elementname": "receivedFrom",
-          "elementtype": "String"
-        },
-        {
-          "elementname": "goodsReceiptNo",
-          "elementtype": "Number"
-        },
-        {
-          "elementname": "inwardDate",
-          "elementtype": "Date"
-        },
-        {
-          "elementname": "deliveryChalanNo",
-          "elementtype": "Number"
-        },
-        {
-          "elementname": "sNo",
-          "elementtype": "Number"
-        },
-        {
-          "elementname": "nameOfTheItem",
-          "elementtype": "String"
-        },
-        {
-          "elementname": "uOm",
-          "elementtype": "Number"
-        },
-        {
-          "elementname": "rate",
-          "elementtype": "Number"
-        },
-        {
-          "elementname": "received",
-          "elementtype": "String"
-        },
-        {
-          "elementname": "jobNo",
-          "elementtype": "Number"
-        }
-      ]
-    },
-    {
       "name": "ItemMaster",
       "pluralname": "ItemMasters",
       "paramname": "item-master",
@@ -1542,7 +1493,7 @@
           "elementtype": "Number"
         },
         {
-          "elementname": "quantityinKgs",
+          "elementname": "quantityInKgs",
           "elementtype": "Number"
         },
         {
@@ -2246,1405 +2197,58 @@
           "elementtype": "String"
         }
       ]
+    },
+    {
+      "name": "InwardEntry",
+      "pluralname": "InwardEntries",
+      "paramname": "inward-entry",
+      "parampluralname": "inward-entries",
+      "camelcasename": "inwardEntry",
+      "elements": [
+        {
+          "elementname": "receivedFrom",
+          "elementtype": "String"
+        },
+        {
+          "elementname": "grnno",
+          "elementtype": "String"
+        },
+        {
+          "elementname": "date",
+          "elementtype": "Date"
+        },
+        {
+          "elementname": "deliveryChallanNo",
+          "elementtype": "String"
+        },
+        {
+          "elementname": "sNo",
+          "elementtype": "Number"
+        },
+        {
+          "elementname": "nameoftheItem",
+          "elementtype": "String"
+        },
+        {
+          "elementname": "uom",
+          "elementtype": "Number"
+        },
+        {
+          "elementname": "rate",
+          "elementtype": "Number"
+        },
+        {
+          "elementname": "received",
+          "elementtype": "String"
+        },
+        {
+          "elementname": "jobNo",
+          "elementtype": "String"
+        }
+      ]
     }
   ],
   "views": [
-    {
-      "viewtype": "edit",
-      "viewname": "Modify Outward Entry",
-      "modelname": "OutwardEntry",
-      "modelpluralname": "OutwardEntries",
-      "modelparamname": "outward-entry",
-      "modelparampluralname": "outward-entries",
-      "modelcamelcasename": "outwardEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "deliveryTo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "deliveryTo",
-          "controllabel": "Delivery To",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryChalanNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryChalanNo",
-          "controllabel": "Delivery Chalan No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "receiver",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "receiver",
-          "controllabel": "Receiver",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "nameOfTheItem",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "nameOfTheItem",
-          "controllabel": "Name Of The Item",
-          "exampletext": ""
-        },
-        {
-          "controlname": "uOm",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "uOm",
-          "controllabel": "U Om",
-          "exampletext": ""
-        },
-        {
-          "controlname": "issued",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "issued",
-          "controllabel": "Issued",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "jobNo",
-          "controllabel": "Job No",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "list",
-      "viewname": "List Outward Entries",
-      "modelname": "OutwardEntry",
-      "modelpluralname": "OutwardEntries",
-      "modelparamname": "outward-entry",
-      "modelparampluralname": "outward-entries",
-      "modelcamelcasename": "outwardEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "deliveryTo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "deliveryTo",
-          "controllabel": "Delivery To",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryChalanNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryChalanNo",
-          "controllabel": "Delivery Chalan No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "receiver",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "receiver",
-          "controllabel": "Receiver",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "nameOfTheItem",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "nameOfTheItem",
-          "controllabel": "Name Of The Item",
-          "exampletext": ""
-        },
-        {
-          "controlname": "uOm",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "uOm",
-          "controllabel": "U Om",
-          "exampletext": ""
-        },
-        {
-          "controlname": "issued",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "issued",
-          "controllabel": "Issued",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "jobNo",
-          "controllabel": "Job No",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "view",
-      "viewname": "View Outward Entry",
-      "modelname": "OutwardEntry",
-      "modelpluralname": "OutwardEntries",
-      "modelparamname": "outward-entry",
-      "modelparampluralname": "outward-entries",
-      "modelcamelcasename": "outwardEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "deliveryTo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "deliveryTo",
-          "controllabel": "Delivery To",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryChalanNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryChalanNo",
-          "controllabel": "Delivery Chalan No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "receiver",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "receiver",
-          "controllabel": "Receiver",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "nameOfTheItem",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "nameOfTheItem",
-          "controllabel": "Name Of The Item",
-          "exampletext": ""
-        },
-        {
-          "controlname": "uOm",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "uOm",
-          "controllabel": "U Om",
-          "exampletext": ""
-        },
-        {
-          "controlname": "issued",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "issued",
-          "controllabel": "Issued",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "jobNo",
-          "controllabel": "Job No",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "create",
-      "viewname": "New Delivery Entry",
-      "modelname": "DeliveryEntry",
-      "modelpluralname": "DeliveryEntries",
-      "modelparamname": "delivery-entry",
-      "modelparampluralname": "delivery-entries",
-      "modelcamelcasename": "deliveryEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "deliveryChallanNo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "deliveryChallanNo",
-          "controllabel": "Delivery Challan No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobNo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "jobNo",
-          "controllabel": "Job No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobDate",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "jobDate",
-          "controllabel": "Job Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "fabric",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "fabric",
-          "controllabel": "Fabric",
-          "exampletext": ""
-        },
-        {
-          "controlname": "gsm",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "gsm",
-          "controllabel": "GSM",
-          "exampletext": ""
-        },
-        {
-          "controlname": "kgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "kgs",
-          "controllabel": "Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "dia",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "dia",
-          "controllabel": "DIA",
-          "exampletext": ""
-        },
-        {
-          "controlname": "stockRolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "stockRolls",
-          "controllabel": "Stock Rolls",
-          "exampletext": ""
-        },
-        {
-          "controlname": "stockKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "stockKgs",
-          "controllabel": "Stock Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryrolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryRolls",
-          "controllabel": "Delivery Rolls/Pcs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryKgs",
-          "controllabel": "Delivery Kgs",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "edit",
-      "viewname": "Modify Delivery Entry",
-      "modelname": "DeliveryEntry",
-      "modelpluralname": "DeliveryEntries",
-      "modelparamname": "delivery-entry",
-      "modelparampluralname": "delivery-entries",
-      "modelcamelcasename": "deliveryEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "deliveryChallanNo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "deliveryChallanNo",
-          "controllabel": "Delivery Challan No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobNo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "jobNo",
-          "controllabel": "Job No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobDate",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "jobDate",
-          "controllabel": "Job Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "fabric",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "fabric",
-          "controllabel": "Fabric",
-          "exampletext": ""
-        },
-        {
-          "controlname": "gsm",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "gsm",
-          "controllabel": "GSM",
-          "exampletext": ""
-        },
-        {
-          "controlname": "kgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "kgs",
-          "controllabel": "Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "dia",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "dia",
-          "controllabel": "DIA",
-          "exampletext": ""
-        },
-        {
-          "controlname": "stockRolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "stockRolls",
-          "controllabel": "Stock Rolls",
-          "exampletext": ""
-        },
-        {
-          "controlname": "stockKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "stockKgs",
-          "controllabel": "Stock Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryrolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryRolls",
-          "controllabel": "Delivery Rolls/Pcs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryKgs",
-          "controllabel": "Delivery Kgs",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "list",
-      "viewname": "List Delivery Entries",
-      "modelname": "DeliveryEntry",
-      "modelpluralname": "DeliveryEntries",
-      "modelparamname": "delivery-entry",
-      "modelparampluralname": "delivery-entries",
-      "modelcamelcasename": "deliveryEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "deliveryChallanNo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "deliveryChallanNo",
-          "controllabel": "Delivery Challan No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobNo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "jobNo",
-          "controllabel": "Job No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobDate",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "jobDate",
-          "controllabel": "Job Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "fabric",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "fabric",
-          "controllabel": "Fabric",
-          "exampletext": ""
-        },
-        {
-          "controlname": "gsm",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "gsm",
-          "controllabel": "GSM",
-          "exampletext": ""
-        },
-        {
-          "controlname": "kgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "kgs",
-          "controllabel": "Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "dia",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "dia",
-          "controllabel": "DIA",
-          "exampletext": ""
-        },
-        {
-          "controlname": "stockRolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "stockRolls",
-          "controllabel": "Stock Rolls",
-          "exampletext": ""
-        },
-        {
-          "controlname": "stockKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "stockKgs",
-          "controllabel": "Stock Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryrolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryRolls",
-          "controllabel": "Delivery Rolls/Pcs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryKgs",
-          "controllabel": "Delivery Kgs",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "view",
-      "viewname": "View Delivery Entry",
-      "modelname": "DeliveryEntry",
-      "modelpluralname": "DeliveryEntries",
-      "modelparamname": "delivery-entry",
-      "modelparampluralname": "delivery-entries",
-      "modelcamelcasename": "deliveryEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "deliveryChallanNo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "deliveryChallanNo",
-          "controllabel": "Delivery Challan No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobNo",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "jobNo",
-          "controllabel": "Job No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "jobDate",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "jobDate",
-          "controllabel": "Job Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "fabric",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "fabric",
-          "controllabel": "Fabric",
-          "exampletext": ""
-        },
-        {
-          "controlname": "gsm",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "gsm",
-          "controllabel": "GSM",
-          "exampletext": ""
-        },
-        {
-          "controlname": "kgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "kgs",
-          "controllabel": "Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "dia",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "dia",
-          "controllabel": "DIA",
-          "exampletext": ""
-        },
-        {
-          "controlname": "stockRolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "stockRolls",
-          "controllabel": "Stock Rolls",
-          "exampletext": ""
-        },
-        {
-          "controlname": "stockKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "stockKgs",
-          "controllabel": "Stock Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryrolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryRolls",
-          "controllabel": "Delivery Rolls/Pcs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "deliveryKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "deliveryKgs",
-          "controllabel": "Delivery Kgs",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "create",
-      "viewname": "New Invoice Entry",
-      "modelname": "InvoiceEntry",
-      "modelpluralname": "InvoiceEntries",
-      "modelparamname": "invoice-entry",
-      "modelparampluralname": "invoice-entries",
-      "modelcamelcasename": "invoiceEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "invoiceNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "invoiceNo",
-          "controllabel": "Invoice No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "partyReference",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "partyReference",
-          "controllabel": "Party Reference",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ourDcno",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ourDcno",
-          "controllabel": "Our Dcno",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "verifiedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "verifiedBy",
-          "controllabel": "Verified By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "descriptionofGoods",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "descriptionofGoods",
-          "controllabel": "Descriptionof Goods",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "rolls",
-          "controllabel": "Rolls",
-          "exampletext": ""
-        },
-        {
-          "controlname": "quantityinKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "quantityinKgs",
-          "controllabel": "Quantityin Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ratePerUnit",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ratePerUnit",
-          "controllabel": "Rate Per Unit",
-          "exampletext": ""
-        },
-        {
-          "controlname": "amount",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "amount",
-          "controllabel": "Amount",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "edit",
-      "viewname": "Modify Job Card",
-      "modelname": "JobCard",
-      "modelpluralname": "JobCards",
-      "modelparamname": "job-card",
-      "modelparampluralname": "job-cards",
-      "modelcamelcasename": "jobCard",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "job",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "job",
-          "controllabel": "Job",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "isTheJobFinished",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "isTheJobFinished",
-          "controllabel": "Is The Job Finished",
-          "exampletext": ""
-        },
-        {
-          "controlname": "remarks",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "remarks",
-          "controllabel": "Remarks",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "edit",
-      "viewname": "Modify Invoice Entry",
-      "modelname": "InvoiceEntry",
-      "modelpluralname": "InvoiceEntries",
-      "modelparamname": "invoice-entry",
-      "modelparampluralname": "invoice-entries",
-      "modelcamelcasename": "invoiceEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "invoiceNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "invoiceNo",
-          "controllabel": "Invoice No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "partyReference",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "partyReference",
-          "controllabel": "Party Reference",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ourDcno",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ourDcno",
-          "controllabel": "Our Dcno",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "verifiedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "verifiedBy",
-          "controllabel": "Verified By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "descriptionofGoods",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "descriptionofGoods",
-          "controllabel": "Descriptionof Goods",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "rolls",
-          "controllabel": "Rolls",
-          "exampletext": ""
-        },
-        {
-          "controlname": "quantityinKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "quantityinKgs",
-          "controllabel": "Quantityin Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ratePerUnit",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ratePerUnit",
-          "controllabel": "Rate Per Unit",
-          "exampletext": ""
-        },
-        {
-          "controlname": "amount",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "amount",
-          "controllabel": "Amount",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "view",
-      "viewname": "View Job Card",
-      "modelname": "JobCard",
-      "modelpluralname": "JobCards",
-      "modelparamname": "job-card",
-      "modelparampluralname": "job-cards",
-      "modelcamelcasename": "jobCard",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "job",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "job",
-          "controllabel": "Job",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "isTheJobFinished",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "isTheJobFinished",
-          "controllabel": "Is The Job Finished",
-          "exampletext": ""
-        },
-        {
-          "controlname": "remarks",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "remarks",
-          "controllabel": "Remarks",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "list",
-      "viewname": "List Invoice Entries",
-      "modelname": "InvoiceEntry",
-      "modelpluralname": "InvoiceEntries",
-      "modelparamname": "invoice-entry",
-      "modelparampluralname": "invoice-entries",
-      "modelcamelcasename": "invoiceEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "invoiceNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "invoiceNo",
-          "controllabel": "Invoice No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "partyReference",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "partyReference",
-          "controllabel": "Party Reference",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ourDcno",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ourDcno",
-          "controllabel": "Our Dcno",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "verifiedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "verifiedBy",
-          "controllabel": "Verified By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "descriptionofGoods",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "descriptionofGoods",
-          "controllabel": "Descriptionof Goods",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "rolls",
-          "controllabel": "Rolls",
-          "exampletext": ""
-        },
-        {
-          "controlname": "quantityinKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "quantityinKgs",
-          "controllabel": "Quantityin Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ratePerUnit",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ratePerUnit",
-          "controllabel": "Rate Per Unit",
-          "exampletext": ""
-        },
-        {
-          "controlname": "amount",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "amount",
-          "controllabel": "Amount",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "list",
-      "viewname": "List Invoice Entries",
-      "modelname": "InvoiceEntry",
-      "modelpluralname": "InvoiceEntries",
-      "modelparamname": "invoice-entry",
-      "modelparampluralname": "invoice-entries",
-      "modelcamelcasename": "invoiceEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "invoiceNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "invoiceNo",
-          "controllabel": "Invoice No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "partyReference",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "partyReference",
-          "controllabel": "Party Reference",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ourDcno",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ourDcno",
-          "controllabel": "Our Dcno",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "verifiedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "verifiedBy",
-          "controllabel": "Verified By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "descriptionofGoods",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "descriptionofGoods",
-          "controllabel": "Descriptionof Goods",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "rolls",
-          "controllabel": "Rolls",
-          "exampletext": ""
-        },
-        {
-          "controlname": "quantityinKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "quantityinKgs",
-          "controllabel": "Quantityin Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ratePerUnit",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ratePerUnit",
-          "controllabel": "Rate Per Unit",
-          "exampletext": ""
-        },
-        {
-          "controlname": "amount",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "amount",
-          "controllabel": "Amount",
-          "exampletext": ""
-        }
-      ]
-    },
     {
       "viewtype": "list",
       "viewname": "List Expenses Entries",
@@ -3693,138 +2297,6 @@
           "width": 3,
           "modelelement": "remarks",
           "controllabel": "Remarks",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "view",
-      "viewname": "View Invoice Entry",
-      "modelname": "InvoiceEntry",
-      "modelpluralname": "InvoiceEntries",
-      "modelparamname": "invoice-entry",
-      "modelparampluralname": "invoice-entries",
-      "modelcamelcasename": "invoiceEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "invoiceNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "invoiceNo",
-          "controllabel": "Invoice No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "partyReference",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "partyReference",
-          "controllabel": "Party Reference",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ourDcno",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ourDcno",
-          "controllabel": "Our Dcno",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "verifiedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "verifiedBy",
-          "controllabel": "Verified By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "descriptionofGoods",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "descriptionofGoods",
-          "controllabel": "Descriptionof Goods",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "rolls",
-          "controllabel": "Rolls",
-          "exampletext": ""
-        },
-        {
-          "controlname": "quantityinKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "quantityinKgs",
-          "controllabel": "Quantityin Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ratePerUnit",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ratePerUnit",
-          "controllabel": "Rate Per Unit",
-          "exampletext": ""
-        },
-        {
-          "controlname": "amount",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "amount",
-          "controllabel": "Amount",
           "exampletext": ""
         }
       ]
@@ -5480,130 +3952,6 @@
     {
       "viewtype": "create",
       "viewname": "New Payment Entry",
-      "modelname": "PaymentEntry",
-      "modelpluralname": "PaymentEntries",
-      "modelparamname": "payment-entry",
-      "modelparampluralname": "payment-entries",
-      "modelcamelcasename": "paymentEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "journalNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "journalNo",
-          "controllabel": "Journal No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "journalDate",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "journalDate",
-          "controllabel": "Journal Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "amount",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "amount",
-          "controllabel": "Amount",
-          "exampletext": ""
-        },
-        {
-          "controlname": "mode",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "mode",
-          "controllabel": "Mode",
-          "exampletext": ""
-        },
-        {
-          "controlname": "by",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "by",
-          "controllabel": "By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "number",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "number",
-          "controllabel": "Number",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "drawnOn",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "drawnOn",
-          "controllabel": "Drawn On",
-          "exampletext": ""
-        },
-        {
-          "controlname": "remarks",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "remarks",
-          "controllabel": "Remarks",
-          "exampletext": ""
-        },
-        {
-          "controlname": "receivedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "receivedBy",
-          "controllabel": "Received By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "edit",
-      "viewname": "Modify Payment Entry",
       "modelname": "PaymentEntry",
       "modelpluralname": "PaymentEntries",
       "modelparamname": "payment-entry",
@@ -13127,534 +11475,6 @@
     },
     {
       "viewtype": "create",
-      "viewname": "New Invoice Entry",
-      "modelname": "InvoiceEntry",
-      "modelpluralname": "InvoiceEntries",
-      "modelparamname": "invoice-entry",
-      "modelparampluralname": "invoice-entries",
-      "modelcamelcasename": "invoiceEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "invoiceNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "invoiceNo",
-          "controllabel": "Invoice No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "partyReference",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "partyReference",
-          "controllabel": "Party Reference",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ourdcno",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ourDcno",
-          "controllabel": "Our D.C No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "verifiedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "verifiedBy",
-          "controllabel": "Verified By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "descriptionofGoods",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "descriptionofGoods",
-          "controllabel": "Descriptionof Goods",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "rolls",
-          "controllabel": "Rolls/Pcs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "quantityinkgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "quantityinKgs",
-          "controllabel": "Quantity in Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rateperunit",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ratePerUnit",
-          "controllabel": "Rate/Unit",
-          "exampletext": ""
-        },
-        {
-          "controlname": "amount",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "amount",
-          "controllabel": "Amount",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "edit",
-      "viewname": "Modify Invoice Entry",
-      "modelname": "InvoiceEntry",
-      "modelpluralname": "InvoiceEntries",
-      "modelparamname": "invoice-entry",
-      "modelparampluralname": "invoice-entries",
-      "modelcamelcasename": "invoiceEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "invoiceNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "invoiceNo",
-          "controllabel": "Invoice No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "partyReference",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "partyReference",
-          "controllabel": "Party Reference",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ourdcno",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ourDcno",
-          "controllabel": "Our D.C No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "verifiedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "verifiedBy",
-          "controllabel": "Verified By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "descriptionofGoods",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "descriptionofGoods",
-          "controllabel": "Descriptionof Goods",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "rolls",
-          "controllabel": "Rolls/Pcs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "quantityinKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "quantityinKgs",
-          "controllabel": "Quantityin Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rateperunit",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ratePerUnit",
-          "controllabel": "Rate/Unit",
-          "exampletext": ""
-        },
-        {
-          "controlname": "amount",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "amount",
-          "controllabel": "Amount",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "list",
-      "viewname": "List Invoice Entries",
-      "modelname": "InvoiceEntry",
-      "modelpluralname": "InvoiceEntries",
-      "modelparamname": "invoice-entry",
-      "modelparampluralname": "invoice-entries",
-      "modelcamelcasename": "invoiceEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "invoiceNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "invoiceNo",
-          "controllabel": "Invoice No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "partyReference",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "partyReference",
-          "controllabel": "Party Reference",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ourdcno",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ourDcno",
-          "controllabel": "Our D.C No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "verifiedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "verifiedBy",
-          "controllabel": "Verified By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "descriptionofgoods",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "descriptionofGoods",
-          "controllabel": "Description of Goods",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "rolls",
-          "controllabel": "Rolls/Pcs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "quantityinKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "quantityinKgs",
-          "controllabel": "Quantityin Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rateperunit",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ratePerUnit",
-          "controllabel": "Rate/Unit",
-          "exampletext": ""
-        },
-        {
-          "controlname": "amount",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "amount",
-          "controllabel": "Amount",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "view",
-      "viewname": "View Invoice Entry",
-      "modelname": "InvoiceEntry",
-      "modelpluralname": "InvoiceEntries",
-      "modelparamname": "invoice-entry",
-      "modelparampluralname": "invoice-entries",
-      "modelcamelcasename": "invoiceEntry",
-      "menuname": "",
-      "controls": [
-        {
-          "controlname": "invoiceNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "invoiceNo",
-          "controllabel": "Invoice No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "date",
-          "controltype": "Date",
-          "width": 3,
-          "modelelement": "date",
-          "controllabel": "Date",
-          "exampletext": ""
-        },
-        {
-          "controlname": "knitter",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "knitter",
-          "controllabel": "Knitter",
-          "exampletext": ""
-        },
-        {
-          "controlname": "party",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "party",
-          "controllabel": "Party",
-          "exampletext": ""
-        },
-        {
-          "controlname": "partyReference",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "partyReference",
-          "controllabel": "Party Reference",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ourDcno",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ourDcno",
-          "controllabel": "Our Dcno",
-          "exampletext": ""
-        },
-        {
-          "controlname": "preparedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "preparedBy",
-          "controllabel": "Prepared By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "verifiedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "verifiedBy",
-          "controllabel": "Verified By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "authorisedBy",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "authorisedBy",
-          "controllabel": "Authorised By",
-          "exampletext": ""
-        },
-        {
-          "controlname": "sNo",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "sNo",
-          "controllabel": "S No",
-          "exampletext": ""
-        },
-        {
-          "controlname": "descriptionofGoods",
-          "controltype": "Text",
-          "width": 3,
-          "modelelement": "descriptionofGoods",
-          "controllabel": "Descriptionof Goods",
-          "exampletext": ""
-        },
-        {
-          "controlname": "rolls",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "rolls",
-          "controllabel": "Rolls",
-          "exampletext": ""
-        },
-        {
-          "controlname": "quantityinKgs",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "quantityinKgs",
-          "controllabel": "Quantityin Kgs",
-          "exampletext": ""
-        },
-        {
-          "controlname": "ratePerUnit",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "ratePerUnit",
-          "controllabel": "Rate Per Unit",
-          "exampletext": ""
-        },
-        {
-          "controlname": "amount",
-          "controltype": "Number",
-          "width": 3,
-          "modelelement": "amount",
-          "controllabel": "Amount",
-          "exampletext": ""
-        }
-      ]
-    },
-    {
-      "viewtype": "create",
       "viewname": "New Collar Size",
       "modelname": "CollarSize",
       "modelpluralname": "CollarSizes",
@@ -18612,30 +16432,2257 @@
           "exampletext": ""
         }
       ]
-    }
-  ],
-  "menus": [
+    },
     {
-      "menuname": "accessories",
-      "menulabel": "Accessories",
-      "submenus": [
+      "viewtype": "create",
+      "viewname": "New Delivery Entry",
+      "modelname": "DeliveryEntry",
+      "modelpluralname": "DeliveryEntries",
+      "modelparamname": "delivery-entry",
+      "modelparampluralname": "delivery-entries",
+      "modelcamelcasename": "deliveryEntry",
+      "menuname": "",
+      "controls": [
         {
-          "mainmenuname": "accessories",
-          "submenuname": "inward-entries",
-          "submenulabel": "Inward Entries"
+          "controlname": "deliveryChallanNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryChallanNo",
+          "controllabel": "Delivery Challan No",
+          "exampletext": ""
         },
         {
-          "mainmenuname": "accessories",
-          "submenuname": "item-masters",
-          "submenulabel": "Item Master"
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
         },
         {
-          "mainmenuname": "accessories",
-          "submenuname": "outward-entries",
-          "submenulabel": "Outward Entries"
+          "controlname": "knitter",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "knitter",
+          "controllabel": "Knitter",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobDate",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "jobDate",
+          "controllabel": "Job Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "party",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "party",
+          "controllabel": "Party",
+          "exampletext": ""
+        },
+        {
+          "controlname": "fabric",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "fabric",
+          "controllabel": "Fabric",
+          "exampletext": ""
+        },
+        {
+          "controlname": "gsm",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "gsm",
+          "controllabel": "Gsm",
+          "exampletext": ""
+        },
+        {
+          "controlname": "kgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "kgs",
+          "controllabel": "Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "dia",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "dia",
+          "controllabel": "Dia",
+          "exampletext": ""
+        },
+        {
+          "controlname": "stockRolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "stockRolls",
+          "controllabel": "Stock Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "stockKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "stockKgs",
+          "controllabel": "Stock Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryRolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryRolls",
+          "controllabel": "Delivery Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryKgs",
+          "controllabel": "Delivery Kgs",
+          "exampletext": ""
         }
       ]
     },
+    {
+      "viewtype": "edit",
+      "viewname": "Modify Delivery Entry",
+      "modelname": "DeliveryEntry",
+      "modelpluralname": "DeliveryEntries",
+      "modelparamname": "delivery-entry",
+      "modelparampluralname": "delivery-entries",
+      "modelcamelcasename": "deliveryEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "deliveryChallanNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryChallanNo",
+          "controllabel": "Delivery Challan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "knitter",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "knitter",
+          "controllabel": "Knitter",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobDate",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "jobDate",
+          "controllabel": "Job Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "party",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "party",
+          "controllabel": "Party",
+          "exampletext": ""
+        },
+        {
+          "controlname": "fabric",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "fabric",
+          "controllabel": "Fabric",
+          "exampletext": ""
+        },
+        {
+          "controlname": "gsm",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "gsm",
+          "controllabel": "Gsm",
+          "exampletext": ""
+        },
+        {
+          "controlname": "kgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "kgs",
+          "controllabel": "Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "dia",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "dia",
+          "controllabel": "Dia",
+          "exampletext": ""
+        },
+        {
+          "controlname": "stockRolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "stockRolls",
+          "controllabel": "Stock Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "stockKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "stockKgs",
+          "controllabel": "Stock Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryRolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryRolls",
+          "controllabel": "Delivery Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryKgs",
+          "controllabel": "Delivery Kgs",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "list",
+      "viewname": "List Delivery Entries",
+      "modelname": "DeliveryEntry",
+      "modelpluralname": "DeliveryEntries",
+      "modelparamname": "delivery-entry",
+      "modelparampluralname": "delivery-entries",
+      "modelcamelcasename": "deliveryEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "deliveryChallanNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryChallanNo",
+          "controllabel": "Delivery Challan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "knitter",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "knitter",
+          "controllabel": "Knitter",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobDate",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "jobDate",
+          "controllabel": "Job Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "party",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "party",
+          "controllabel": "Party",
+          "exampletext": ""
+        },
+        {
+          "controlname": "fabric",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "fabric",
+          "controllabel": "Fabric",
+          "exampletext": ""
+        },
+        {
+          "controlname": "gsm",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "gsm",
+          "controllabel": "Gsm",
+          "exampletext": ""
+        },
+        {
+          "controlname": "kgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "kgs",
+          "controllabel": "Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "dia",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "dia",
+          "controllabel": "Dia",
+          "exampletext": ""
+        },
+        {
+          "controlname": "stockRolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "stockRolls",
+          "controllabel": "Stock Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "stockKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "stockKgs",
+          "controllabel": "Stock Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryRolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryRolls",
+          "controllabel": "Delivery Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryKgs",
+          "controllabel": "Delivery Kgs",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "view",
+      "viewname": "View Delivery Entry",
+      "modelname": "DeliveryEntry",
+      "modelpluralname": "DeliveryEntries",
+      "modelparamname": "delivery-entry",
+      "modelparampluralname": "delivery-entries",
+      "modelcamelcasename": "deliveryEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "deliveryChallanNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryChallanNo",
+          "controllabel": "Delivery Challan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "knitter",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "knitter",
+          "controllabel": "Knitter",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobDate",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "jobDate",
+          "controllabel": "Job Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "party",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "party",
+          "controllabel": "Party",
+          "exampletext": ""
+        },
+        {
+          "controlname": "fabric",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "fabric",
+          "controllabel": "Fabric",
+          "exampletext": ""
+        },
+        {
+          "controlname": "gsm",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "gsm",
+          "controllabel": "Gsm",
+          "exampletext": ""
+        },
+        {
+          "controlname": "kgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "kgs",
+          "controllabel": "Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "dia",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "dia",
+          "controllabel": "Dia",
+          "exampletext": ""
+        },
+        {
+          "controlname": "stockRolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "stockRolls",
+          "controllabel": "Stock Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "stockKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "stockKgs",
+          "controllabel": "Stock Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryRolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryRolls",
+          "controllabel": "Delivery Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryKgs",
+          "controllabel": "Delivery Kgs",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "create",
+      "viewname": "New Item Inward Entry",
+      "modelname": "InwardEntry",
+      "modelpluralname": "InwardEntries",
+      "modelparamname": "inward-entry",
+      "modelparampluralname": "inward-entries",
+      "modelcamelcasename": "inwardEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "receivedFrom",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "receivedFrom",
+          "controllabel": "Received From",
+          "exampletext": ""
+        },
+        {
+          "controlname": "grnno",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "grnno",
+          "controllabel": "Grnno",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryChallanNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryChallanNo",
+          "controllabel": "Delivery Challan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "nameoftheItem",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "nameoftheItem",
+          "controllabel": "Nameofthe Item",
+          "exampletext": ""
+        },
+        {
+          "controlname": "uom",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "uom",
+          "controllabel": "Uom",
+          "exampletext": ""
+        },
+        {
+          "controlname": "rate",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "rate",
+          "controllabel": "Rate",
+          "exampletext": ""
+        },
+        {
+          "controlname": "received",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "received",
+          "controllabel": "Received",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "edit",
+      "viewname": "Modify Item Inward Entry",
+      "modelname": "InwardEntry",
+      "modelpluralname": "InwardEntries",
+      "modelparamname": "inward-entry",
+      "modelparampluralname": "inward-entries",
+      "modelcamelcasename": "inwardEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "receivedFrom",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "receivedFrom",
+          "controllabel": "Received From",
+          "exampletext": ""
+        },
+        {
+          "controlname": "grnno",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "grnno",
+          "controllabel": "Grnno",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryChallanNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryChallanNo",
+          "controllabel": "Delivery Challan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "nameoftheItem",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "nameoftheItem",
+          "controllabel": "Nameofthe Item",
+          "exampletext": ""
+        },
+        {
+          "controlname": "uom",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "uom",
+          "controllabel": "Uom",
+          "exampletext": ""
+        },
+        {
+          "controlname": "rate",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "rate",
+          "controllabel": "Rate",
+          "exampletext": ""
+        },
+        {
+          "controlname": "received",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "received",
+          "controllabel": "Received",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "list",
+      "viewname": "List Item Inward Entries",
+      "modelname": "InwardEntry",
+      "modelpluralname": "InwardEntries",
+      "modelparamname": "inward-entry",
+      "modelparampluralname": "inward-entries",
+      "modelcamelcasename": "inwardEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "receivedFrom",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "receivedFrom",
+          "controllabel": "Received From",
+          "exampletext": ""
+        },
+        {
+          "controlname": "grnno",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "grnno",
+          "controllabel": "Grnno",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryChallanNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryChallanNo",
+          "controllabel": "Delivery Challan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "nameoftheItem",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "nameoftheItem",
+          "controllabel": "Nameofthe Item",
+          "exampletext": ""
+        },
+        {
+          "controlname": "uom",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "uom",
+          "controllabel": "Uom",
+          "exampletext": ""
+        },
+        {
+          "controlname": "rate",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "rate",
+          "controllabel": "Rate",
+          "exampletext": ""
+        },
+        {
+          "controlname": "received",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "received",
+          "controllabel": "Received",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "view",
+      "viewname": "View Item Inward Entry",
+      "modelname": "InwardEntry",
+      "modelpluralname": "InwardEntries",
+      "modelparamname": "inward-entry",
+      "modelparampluralname": "inward-entries",
+      "modelcamelcasename": "inwardEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "receivedFrom",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "receivedFrom",
+          "controllabel": "Received From",
+          "exampletext": ""
+        },
+        {
+          "controlname": "grnno",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "grnno",
+          "controllabel": "Grnno",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryChallanNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryChallanNo",
+          "controllabel": "Delivery Challan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "nameoftheItem",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "nameoftheItem",
+          "controllabel": "Nameofthe Item",
+          "exampletext": ""
+        },
+        {
+          "controlname": "uom",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "uom",
+          "controllabel": "Uom",
+          "exampletext": ""
+        },
+        {
+          "controlname": "rate",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "rate",
+          "controllabel": "Rate",
+          "exampletext": ""
+        },
+        {
+          "controlname": "received",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "received",
+          "controllabel": "Received",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "create",
+      "viewname": "New Outward Entry",
+      "modelname": "OutwardEntry",
+      "modelpluralname": "OutwardEntries",
+      "modelparamname": "outward-entry",
+      "modelparampluralname": "outward-entries",
+      "modelcamelcasename": "outwardEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "deliveryTo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryTo",
+          "controllabel": "Delivery To",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryChalanNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryChalanNo",
+          "controllabel": "Delivery Chalan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "receiver",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "receiver",
+          "controllabel": "Receiver",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "nameOfTheItem",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "nameOfTheItem",
+          "controllabel": "Name Of The Item",
+          "exampletext": ""
+        },
+        {
+          "controlname": "uOm",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "uOm",
+          "controllabel": "U Om",
+          "exampletext": ""
+        },
+        {
+          "controlname": "issued",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "issued",
+          "controllabel": "Issued",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "edit",
+      "viewname": "Modify Outward Entry",
+      "modelname": "OutwardEntry",
+      "modelpluralname": "OutwardEntries",
+      "modelparamname": "outward-entry",
+      "modelparampluralname": "outward-entries",
+      "modelcamelcasename": "outwardEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "deliveryTo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryTo",
+          "controllabel": "Delivery To",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryChalanNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryChalanNo",
+          "controllabel": "Delivery Chalan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "receiver",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "receiver",
+          "controllabel": "Receiver",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "nameOfTheItem",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "nameOfTheItem",
+          "controllabel": "Name Of The Item",
+          "exampletext": ""
+        },
+        {
+          "controlname": "uOm",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "uOm",
+          "controllabel": "U Om",
+          "exampletext": ""
+        },
+        {
+          "controlname": "issued",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "issued",
+          "controllabel": "Issued",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "list",
+      "viewname": "List Outward Entry",
+      "modelname": "OutwardEntry",
+      "modelpluralname": "OutwardEntries",
+      "modelparamname": "outward-entry",
+      "modelparampluralname": "outward-entries",
+      "modelcamelcasename": "outwardEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "deliveryTo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryTo",
+          "controllabel": "Delivery To",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryChalanNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryChalanNo",
+          "controllabel": "Delivery Chalan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "receiver",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "receiver",
+          "controllabel": "Receiver",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "nameOfTheItem",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "nameOfTheItem",
+          "controllabel": "Name Of The Item",
+          "exampletext": ""
+        },
+        {
+          "controlname": "uOm",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "uOm",
+          "controllabel": "U Om",
+          "exampletext": ""
+        },
+        {
+          "controlname": "issued",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "issued",
+          "controllabel": "Issued",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "view",
+      "viewname": "View Outward Entry",
+      "modelname": "OutwardEntry",
+      "modelpluralname": "OutwardEntries",
+      "modelparamname": "outward-entry",
+      "modelparampluralname": "outward-entries",
+      "modelcamelcasename": "outwardEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "deliveryTo",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "deliveryTo",
+          "controllabel": "Delivery To",
+          "exampletext": ""
+        },
+        {
+          "controlname": "deliveryChalanNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "deliveryChalanNo",
+          "controllabel": "Delivery Chalan No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "receiver",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "receiver",
+          "controllabel": "Receiver",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "nameOfTheItem",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "nameOfTheItem",
+          "controllabel": "Name Of The Item",
+          "exampletext": ""
+        },
+        {
+          "controlname": "uOm",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "uOm",
+          "controllabel": "U Om",
+          "exampletext": ""
+        },
+        {
+          "controlname": "issued",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "issued",
+          "controllabel": "Issued",
+          "exampletext": ""
+        },
+        {
+          "controlname": "jobNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "jobNo",
+          "controllabel": "Job No",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "create",
+      "viewname": "New Expenses Entry",
+      "modelname": "ExpenseEntry",
+      "modelpluralname": "ExpenseEntries",
+      "modelparamname": "expense-entry",
+      "modelparampluralname": "expense-entries",
+      "modelcamelcasename": "expenseEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "particulars",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "particulars",
+          "controllabel": "Particulars",
+          "exampletext": ""
+        },
+        {
+          "controlname": "amount",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "amount",
+          "controllabel": "Amount",
+          "exampletext": ""
+        },
+        {
+          "controlname": "remarks",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "remarks",
+          "controllabel": "Remarks",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "edit",
+      "viewname": "Modify Expenses Entry",
+      "modelname": "ExpenseEntry",
+      "modelpluralname": "ExpenseEntries",
+      "modelparamname": "expense-entry",
+      "modelparampluralname": "expense-entries",
+      "modelcamelcasename": "expenseEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "particulars",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "particulars",
+          "controllabel": "Particulars",
+          "exampletext": ""
+        },
+        {
+          "controlname": "amount",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "amount",
+          "controllabel": "Amount",
+          "exampletext": ""
+        },
+        {
+          "controlname": "remarks",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "remarks",
+          "controllabel": "Remarks",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "view",
+      "viewname": "View Expenses Entry",
+      "modelname": "ExpenseEntry",
+      "modelpluralname": "ExpenseEntries",
+      "modelparamname": "expense-entry",
+      "modelparampluralname": "expense-entries",
+      "modelcamelcasename": "expenseEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "particulars",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "particulars",
+          "controllabel": "Particulars",
+          "exampletext": ""
+        },
+        {
+          "controlname": "amount",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "amount",
+          "controllabel": "Amount",
+          "exampletext": ""
+        },
+        {
+          "controlname": "remarks",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "remarks",
+          "controllabel": "Remarks",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "create",
+      "viewname": "New Invoice Entry",
+      "modelname": "InvoiceEntry",
+      "modelpluralname": "InvoiceEntries",
+      "modelparamname": "invoice-entry",
+      "modelparampluralname": "invoice-entries",
+      "modelcamelcasename": "invoiceEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "invoiceNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "invoiceNo",
+          "controllabel": "Invoice No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "knitter",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "knitter",
+          "controllabel": "Knitter",
+          "exampletext": ""
+        },
+        {
+          "controlname": "party",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "party",
+          "controllabel": "Party",
+          "exampletext": ""
+        },
+        {
+          "controlname": "partyReference",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "partyReference",
+          "controllabel": "Party Reference",
+          "exampletext": ""
+        },
+        {
+          "controlname": "ourDcno",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "ourDcno",
+          "controllabel": "Our Dcno",
+          "exampletext": ""
+        },
+        {
+          "controlname": "preparedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "preparedBy",
+          "controllabel": "Prepared By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "verifiedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "verifiedBy",
+          "controllabel": "Verified By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "authorisedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "authorisedBy",
+          "controllabel": "Authorised By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "descriptionofGoods",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "descriptionofGoods",
+          "controllabel": "Descriptionof Goods",
+          "exampletext": ""
+        },
+        {
+          "controlname": "rolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "rolls",
+          "controllabel": "Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "quantityInKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "quantityInKgs",
+          "controllabel": "Quantity In Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "ratePerUnit",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "ratePerUnit",
+          "controllabel": "Rate Per Unit",
+          "exampletext": ""
+        },
+        {
+          "controlname": "amount",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "amount",
+          "controllabel": "Amount",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "edit",
+      "viewname": "Modify Invoice Entry",
+      "modelname": "InvoiceEntry",
+      "modelpluralname": "InvoiceEntries",
+      "modelparamname": "invoice-entry",
+      "modelparampluralname": "invoice-entries",
+      "modelcamelcasename": "invoiceEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "invoiceNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "invoiceNo",
+          "controllabel": "Invoice No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "knitter",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "knitter",
+          "controllabel": "Knitter",
+          "exampletext": ""
+        },
+        {
+          "controlname": "party",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "party",
+          "controllabel": "Party",
+          "exampletext": ""
+        },
+        {
+          "controlname": "partyReference",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "partyReference",
+          "controllabel": "Party Reference",
+          "exampletext": ""
+        },
+        {
+          "controlname": "ourDcno",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "ourDcno",
+          "controllabel": "Our Dcno",
+          "exampletext": ""
+        },
+        {
+          "controlname": "preparedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "preparedBy",
+          "controllabel": "Prepared By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "verifiedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "verifiedBy",
+          "controllabel": "Verified By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "authorisedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "authorisedBy",
+          "controllabel": "Authorised By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "descriptionofGoods",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "descriptionofGoods",
+          "controllabel": "Descriptionof Goods",
+          "exampletext": ""
+        },
+        {
+          "controlname": "rolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "rolls",
+          "controllabel": "Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "quantityInKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "quantityInKgs",
+          "controllabel": "Quantity In Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "ratePerUnit",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "ratePerUnit",
+          "controllabel": "Rate Per Unit",
+          "exampletext": ""
+        },
+        {
+          "controlname": "amount",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "amount",
+          "controllabel": "Amount",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "list",
+      "viewname": "List Invoice Entry",
+      "modelname": "InvoiceEntry",
+      "modelpluralname": "InvoiceEntries",
+      "modelparamname": "invoice-entry",
+      "modelparampluralname": "invoice-entries",
+      "modelcamelcasename": "invoiceEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "invoiceNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "invoiceNo",
+          "controllabel": "Invoice No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "knitter",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "knitter",
+          "controllabel": "Knitter",
+          "exampletext": ""
+        },
+        {
+          "controlname": "party",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "party",
+          "controllabel": "Party",
+          "exampletext": ""
+        },
+        {
+          "controlname": "partyReference",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "partyReference",
+          "controllabel": "Party Reference",
+          "exampletext": ""
+        },
+        {
+          "controlname": "ourDcno",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "ourDcno",
+          "controllabel": "Our Dcno",
+          "exampletext": ""
+        },
+        {
+          "controlname": "preparedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "preparedBy",
+          "controllabel": "Prepared By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "verifiedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "verifiedBy",
+          "controllabel": "Verified By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "authorisedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "authorisedBy",
+          "controllabel": "Authorised By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "descriptionofGoods",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "descriptionofGoods",
+          "controllabel": "Descriptionof Goods",
+          "exampletext": ""
+        },
+        {
+          "controlname": "rolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "rolls",
+          "controllabel": "Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "quantityInKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "quantityInKgs",
+          "controllabel": "Quantity In Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "ratePerUnit",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "ratePerUnit",
+          "controllabel": "Rate Per Unit",
+          "exampletext": ""
+        },
+        {
+          "controlname": "amount",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "amount",
+          "controllabel": "Amount",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "view",
+      "viewname": "View Invoice Entry",
+      "modelname": "InvoiceEntry",
+      "modelpluralname": "InvoiceEntries",
+      "modelparamname": "invoice-entry",
+      "modelparampluralname": "invoice-entries",
+      "modelcamelcasename": "invoiceEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "invoiceNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "invoiceNo",
+          "controllabel": "Invoice No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "knitter",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "knitter",
+          "controllabel": "Knitter",
+          "exampletext": ""
+        },
+        {
+          "controlname": "party",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "party",
+          "controllabel": "Party",
+          "exampletext": ""
+        },
+        {
+          "controlname": "partyReference",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "partyReference",
+          "controllabel": "Party Reference",
+          "exampletext": ""
+        },
+        {
+          "controlname": "ourDcno",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "ourDcno",
+          "controllabel": "Our Dcno",
+          "exampletext": ""
+        },
+        {
+          "controlname": "preparedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "preparedBy",
+          "controllabel": "Prepared By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "verifiedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "verifiedBy",
+          "controllabel": "Verified By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "authorisedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "authorisedBy",
+          "controllabel": "Authorised By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "sNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "sNo",
+          "controllabel": "S No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "descriptionofGoods",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "descriptionofGoods",
+          "controllabel": "Descriptionof Goods",
+          "exampletext": ""
+        },
+        {
+          "controlname": "rolls",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "rolls",
+          "controllabel": "Rolls",
+          "exampletext": ""
+        },
+        {
+          "controlname": "quantityInKgs",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "quantityInKgs",
+          "controllabel": "Quantity In Kgs",
+          "exampletext": ""
+        },
+        {
+          "controlname": "ratePerUnit",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "ratePerUnit",
+          "controllabel": "Rate Per Unit",
+          "exampletext": ""
+        },
+        {
+          "controlname": "amount",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "amount",
+          "controllabel": "Amount",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "edit",
+      "viewname": "Modify Payment Entry",
+      "modelname": "PaymentEntry",
+      "modelpluralname": "PaymentEntries",
+      "modelparamname": "payment-entry",
+      "modelparampluralname": "payment-entries",
+      "modelcamelcasename": "paymentEntry",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "journalNo",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "journalNo",
+          "controllabel": "Journal No",
+          "exampletext": ""
+        },
+        {
+          "controlname": "journalDate",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "journalDate",
+          "controllabel": "Journal Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "party",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "party",
+          "controllabel": "Party",
+          "exampletext": ""
+        },
+        {
+          "controlname": "knitter",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "knitter",
+          "controllabel": "Knitter",
+          "exampletext": ""
+        },
+        {
+          "controlname": "amount",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "amount",
+          "controllabel": "Amount",
+          "exampletext": ""
+        },
+        {
+          "controlname": "mode",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "mode",
+          "controllabel": "Mode",
+          "exampletext": ""
+        },
+        {
+          "controlname": "by",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "by",
+          "controllabel": "By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "number",
+          "controltype": "Number",
+          "width": 3,
+          "modelelement": "number",
+          "controllabel": "Number",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "drawnOn",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "drawnOn",
+          "controllabel": "Drawn On",
+          "exampletext": ""
+        },
+        {
+          "controlname": "remarks",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "remarks",
+          "controllabel": "Remarks",
+          "exampletext": ""
+        },
+        {
+          "controlname": "receivedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "receivedBy",
+          "controllabel": "Received By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "preparedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "preparedBy",
+          "controllabel": "Prepared By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "authorisedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "authorisedBy",
+          "controllabel": "Authorised By",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "create",
+      "viewname": "New Job Card",
+      "modelname": "JobCard",
+      "modelpluralname": "JobCards",
+      "modelparamname": "job-card",
+      "modelparampluralname": "job-cards",
+      "modelcamelcasename": "jobCard",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "job",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "job",
+          "controllabel": "Job",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "isTheJobFinished",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "isTheJobFinished",
+          "controllabel": "Is The Job Finished",
+          "exampletext": ""
+        },
+        {
+          "controlname": "remarks",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "remarks",
+          "controllabel": "Remarks",
+          "exampletext": ""
+        },
+        {
+          "controlname": "preparedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "preparedBy",
+          "controllabel": "Prepared By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "authorisedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "authorisedBy",
+          "controllabel": "Authorised By",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "edit",
+      "viewname": "Modify Job Card",
+      "modelname": "JobCard",
+      "modelpluralname": "JobCards",
+      "modelparamname": "job-card",
+      "modelparampluralname": "job-cards",
+      "modelcamelcasename": "jobCard",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "job",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "job",
+          "controllabel": "Job",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "isTheJobFinished",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "isTheJobFinished",
+          "controllabel": "Is The Job Finished",
+          "exampletext": ""
+        },
+        {
+          "controlname": "remarks",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "remarks",
+          "controllabel": "Remarks",
+          "exampletext": ""
+        },
+        {
+          "controlname": "preparedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "preparedBy",
+          "controllabel": "Prepared By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "authorisedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "authorisedBy",
+          "controllabel": "Authorised By",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "list",
+      "viewname": "List Job Cards",
+      "modelname": "JobCard",
+      "modelpluralname": "JobCards",
+      "modelparamname": "job-card",
+      "modelparampluralname": "job-cards",
+      "modelcamelcasename": "jobCard",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "job",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "job",
+          "controllabel": "Job",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "isTheJobFinished",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "isTheJobFinished",
+          "controllabel": "Is The Job Finished",
+          "exampletext": ""
+        },
+        {
+          "controlname": "remarks",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "remarks",
+          "controllabel": "Remarks",
+          "exampletext": ""
+        },
+        {
+          "controlname": "preparedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "preparedBy",
+          "controllabel": "Prepared By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "authorisedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "authorisedBy",
+          "controllabel": "Authorised By",
+          "exampletext": ""
+        }
+      ]
+    },
+    {
+      "viewtype": "view",
+      "viewname": "View Job Card",
+      "modelname": "JobCard",
+      "modelpluralname": "JobCards",
+      "modelparamname": "job-card",
+      "modelparampluralname": "job-cards",
+      "modelcamelcasename": "jobCard",
+      "menuname": "",
+      "controls": [
+        {
+          "controlname": "job",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "job",
+          "controllabel": "Job",
+          "exampletext": ""
+        },
+        {
+          "controlname": "date",
+          "controltype": "Date",
+          "width": 3,
+          "modelelement": "date",
+          "controllabel": "Date",
+          "exampletext": ""
+        },
+        {
+          "controlname": "isTheJobFinished",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "isTheJobFinished",
+          "controllabel": "Is The Job Finished",
+          "exampletext": ""
+        },
+        {
+          "controlname": "remarks",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "remarks",
+          "controllabel": "Remarks",
+          "exampletext": ""
+        },
+        {
+          "controlname": "preparedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "preparedBy",
+          "controllabel": "Prepared By",
+          "exampletext": ""
+        },
+        {
+          "controlname": "authorisedBy",
+          "controltype": "Text",
+          "width": 3,
+          "modelelement": "authorisedBy",
+          "controllabel": "Authorised By",
+          "exampletext": ""
+        }
+      ]
+    }
+  ],
+  "menus": [
     {
       "menuname": "entry",
       "menulabel": "Entry",
@@ -18699,42 +18746,36 @@
           "mainmenuname": "entry",
           "submenuname": "yarn-return-entries",
           "submenulabel": "Yarn Return Entry"
-        }
-      ]
-    },
-    {
-      "menuname": "fabricstock",
-      "menulabel": "Fabric Stock",
-      "submenus": [
-        {
-          "mainmenuname": "fabricstock",
-          "submenuname": "fabric-item-masters",
-          "submenulabel": "Fabric Item Master"
         },
         {
-          "mainmenuname": "fabricstock",
+          "mainmenuname": "entry",
           "submenuname": "fabric-sales",
           "submenulabel": "Fabric Sales"
         },
         {
-          "mainmenuname": "fabricstock",
-          "submenuname": "fabric-sale-registers",
-          "submenulabel": "Fabric Sales Register"
-        },
-        {
-          "mainmenuname": "fabricstock",
-          "submenuname": "fabric-stock-reports",
-          "submenulabel": "Fabric Stock Report"
-        },
-        {
-          "mainmenuname": "fabricstock",
+          "mainmenuname": "entry",
           "submenuname": "fabric-transfers",
           "submenulabel": "Fabric Transfer"
         },
         {
-          "mainmenuname": "fabricstock",
-          "submenuname": "fabric-transfer-registers",
-          "submenulabel": "Fabric Transfer Register"
+          "mainmenuname": "entry",
+          "submenuname": "bulk-needle-change-entries",
+          "submenulabel": "Bulk Needle Change Entry"
+        },
+        {
+          "mainmenuname": "entry",
+          "submenuname": "needles-breakages",
+          "submenulabel": "Needles Breakage"
+        },
+        {
+          "mainmenuname": "entry",
+          "submenuname": "inward-entries",
+          "submenulabel": "Inward Entry"
+        },
+        {
+          "mainmenuname": "entry",
+          "submenuname": "outward-entries",
+          "submenulabel": "Outward Entry"
         }
       ]
     },
@@ -18754,11 +18795,6 @@
         },
         {
           "mainmenuname": "generalitems",
-          "submenuname": "general-invoice-registers",
-          "submenulabel": "General Invoice Register"
-        },
-        {
-          "mainmenuname": "generalitems",
           "submenuname": "general-item-inward-entries",
           "submenulabel": "General Item Inward Entry"
         },
@@ -18766,16 +18802,6 @@
           "mainmenuname": "generalitems",
           "submenuname": "general-item-outward-entries",
           "submenulabel": "General Item Outward Entry"
-        },
-        {
-          "mainmenuname": "generalitems",
-          "submenuname": "general-item-outstanding-registers",
-          "submenulabel": "General Item Outstanding Register"
-        },
-        {
-          "mainmenuname": "generalitems",
-          "submenuname": "general-item-outward-registers",
-          "submenulabel": "General Item Outward Register"
         },
         {
           "mainmenuname": "generalitems",
@@ -18887,37 +18913,67 @@
           "mainmenuname": "master",
           "submenuname": "yarn-descriptions",
           "submenulabel": "Yarn Description"
+        },
+        {
+          "mainmenuname": "master",
+          "submenuname": "item-masters",
+          "submenulabel": "Item Master"
+        },
+        {
+          "mainmenuname": "master",
+          "submenuname": "fabric-item-masters",
+          "submenulabel": "Fabric Iitem Masters"
         }
       ]
     },
     {
-      "menuname": "needles",
-      "menulabel": "Needles",
+      "menuname": "reports",
+      "menulabel": "Reports",
       "submenus": [
         {
-          "mainmenuname": "needles",
-          "submenuname": "bulk-needle-change-entries",
-          "submenulabel": "Bulk Needle Change Entry"
+          "mainmenuname": "reports",
+          "submenuname": "fabric-sale-registers",
+          "submenulabel": "Fabric Sales Register"
         },
         {
-          "mainmenuname": "needles",
+          "mainmenuname": "reports",
+          "submenuname": "fabric-stock-reports",
+          "submenulabel": "Fabric Stock Report"
+        },
+        {
+          "mainmenuname": "reports",
+          "submenuname": "fabric-transfer-registers",
+          "submenulabel": "Fabric Transfer Register"
+        },
+        {
+          "mainmenuname": "reports",
+          "submenuname": "general-invoice-registers",
+          "submenulabel": "General Invoice Register"
+        },
+        {
+          "mainmenuname": "reports",
+          "submenuname": "general-item-outstanding-registers",
+          "submenulabel": "General Item Outstanding Register"
+        },
+        {
+          "mainmenuname": "reports",
+          "submenuname": "general-item-outward-registers",
+          "submenulabel": "General Item Outward Register"
+        },
+        {
+          "mainmenuname": "reports",
           "submenuname": "bulk-needle-change-reports",
           "submenulabel": "Bulk Needle Change Report"
         },
         {
-          "mainmenuname": "needles",
-          "submenuname": "needles-breakages",
-          "submenulabel": "Needles Breakage"
-        },
-        {
-          "mainmenuname": "needles",
-          "submenuname": "needles-inward-entries",
-          "submenulabel": "Needles Inward Entry"
-        },
-        {
-          "mainmenuname": "needles",
+          "mainmenuname": "reports",
           "submenuname": "needles-inward-registers",
           "submenulabel": "Needles Inward Register"
+        },
+        {
+          "mainmenuname": "reports",
+          "submenuname": "production-reports",
+          "submenulabel": "Production Report"
         }
       ]
     }

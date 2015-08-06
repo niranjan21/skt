@@ -17,19 +17,19 @@ var InwardEntrySchema = new Schema({
 		required: 'Please fill receivedFrom name'
 	},
   
-  goodsReceiptNo: {
-		type: Number,
-		required: 'Please fill goodsReceiptNo name'
+  grnno: {
+		type: String,
+		required: 'Please fill grnno name'
 	},
   
-  inwardDate: {
+  date: {
 		type: Date,
-		required: 'Please fill inwardDate name'
+		required: 'Please fill date name'
 	},
   
-  deliveryChalanNo: {
-		type: Number,
-		required: 'Please fill deliveryChalanNo name'
+  deliveryChallanNo: {
+		type: String,
+		required: 'Please fill deliveryChallanNo name'
 	},
   
   sNo: {
@@ -37,14 +37,14 @@ var InwardEntrySchema = new Schema({
 		required: 'Please fill sNo name'
 	},
   
-  nameOfTheItem: {
+  nameoftheItem: {
 		type: String,
-		required: 'Please fill nameOfTheItem name'
+		required: 'Please fill nameoftheItem name'
 	},
   
-  uOm: {
+  uom: {
 		type: Number,
-		required: 'Please fill uOm name'
+		required: 'Please fill uom name'
 	},
   
   rate: {
@@ -58,7 +58,7 @@ var InwardEntrySchema = new Schema({
 	},
   
   jobNo: {
-		type: Number,
+		type: String,
 		required: 'Please fill jobNo name'
 	},
   

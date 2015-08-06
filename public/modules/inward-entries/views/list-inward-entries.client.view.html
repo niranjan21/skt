@@ -1,13 +1,13 @@
 <section data-ng-controller="InwardEntriesController" data-ng-init="find()">
   <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-12">
-      <h2>List Inward Entries</h2>
+      <h2>List Item Inward Entries</h2>
       <ol class="breadcrumb">
         <li>
           <a href="#!/">Home</a>
         </li>
         <li class="active">
-          <strong>List Inward Entries</strong>
+          <strong>List Item Inward Entries</strong>
         </li>
       </ol>
     </div>
@@ -38,17 +38,17 @@
               
               <th>Received From</th>
               
-              <th>Goods Receipt No</th>
+              <th>Grnno</th>
               
-              <th>Inward Date</th>
+              <th>Date</th>
               
-              <th>Delivery Chalan No</th>
+              <th>Delivery Challan No</th>
               
               <th>S No</th>
               
-              <th>Name Of The Item</th>
+              <th>Nameofthe Item</th>
               
-              <th>U Om</th>
+              <th>Uom</th>
               
               <th>Rate</th>
               
@@ -66,15 +66,15 @@
               
               
                 
-              <td>{{ inwardentry.goodsReceiptNo }}</td>
+              <td>{{ inwardentry.grnno }}</td>
               
               
               
-              <td>{{ inwardentry.inwardDate | date }}</td>
+              <td>{{ inwardentry.date | date }}</td>
               
               
                 
-              <td>{{ inwardentry.deliveryChalanNo }}</td>
+              <td>{{ inwardentry.deliveryChallanNo }}</td>
               
               
                 
@@ -82,11 +82,11 @@
               
               
                 
-              <td>{{ inwardentry.nameOfTheItem }}</td>
+              <td>{{ inwardentry.nameoftheItem }}</td>
               
               
                 
-              <td>{{ inwardentry.uOm }}</td>
+              <td>{{ inwardentry.uom }}</td>
               
               
                 

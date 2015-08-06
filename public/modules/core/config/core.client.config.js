@@ -5,15 +5,6 @@ angular.module('core').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
     
-      Menus.addMenuItem('topbar', 'Accessories', 'accessories', 'dropdown');
-      
-      Menus.addSubMenuItem('topbar', 'accessories', 'Inward Entries', 'inward-entries');
-      
-      Menus.addSubMenuItem('topbar', 'accessories', 'Item Master', 'item-masters');
-      
-      Menus.addSubMenuItem('topbar', 'accessories', 'Outward Entries', 'outward-entries');
-      
-    
       Menus.addMenuItem('topbar', 'Entry', 'entry', 'dropdown');
       
       Menus.addSubMenuItem('topbar', 'entry', 'Delivery Entries', 'delivery-entries');
@@ -40,20 +31,17 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'entry', 'Yarn Return Entry', 'yarn-return-entries');
       
-    
-      Menus.addMenuItem('topbar', 'Fabric Stock', 'fabricstock', 'dropdown');
+      Menus.addSubMenuItem('topbar', 'entry', 'Fabric Sales', 'fabric-sales');
       
-      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Item Master', 'fabric-item-masters');
+      Menus.addSubMenuItem('topbar', 'entry', 'Fabric Transfer', 'fabric-transfers');
       
-      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Sales', 'fabric-sales');
+      Menus.addSubMenuItem('topbar', 'entry', 'Bulk Needle Change Entry', 'bulk-needle-change-entries');
       
-      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Sales Register', 'fabric-sale-registers');
+      Menus.addSubMenuItem('topbar', 'entry', 'Needles Breakage', 'needles-breakages');
       
-      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Stock Report', 'fabric-stock-reports');
+      Menus.addSubMenuItem('topbar', 'entry', 'Inward Entry', 'inward-entries');
       
-      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Transfer', 'fabric-transfers');
-      
-      Menus.addSubMenuItem('topbar', 'fabricstock', 'Fabric Transfer Register', 'fabric-transfer-registers');
+      Menus.addSubMenuItem('topbar', 'entry', 'Outward Entry', 'outward-entries');
       
     
       Menus.addMenuItem('topbar', 'General Items', 'generalitems', 'dropdown');
@@ -62,15 +50,9 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'generalitems', 'Direct Outward Entry', 'direct-outward-entries');
       
-      Menus.addSubMenuItem('topbar', 'generalitems', 'General Invoice Register', 'general-invoice-registers');
-      
       Menus.addSubMenuItem('topbar', 'generalitems', 'General Item Inward Entry', 'general-item-inward-entries');
       
       Menus.addSubMenuItem('topbar', 'generalitems', 'General Item Outward Entry', 'general-item-outward-entries');
-      
-      Menus.addSubMenuItem('topbar', 'generalitems', 'General Item Outstanding Register', 'general-item-outstanding-registers');
-      
-      Menus.addSubMenuItem('topbar', 'generalitems', 'General Item Outward Register', 'general-item-outward-registers');
       
       Menus.addSubMenuItem('topbar', 'generalitems', 'General Test Report', 'general-test-reports');
       
@@ -117,29 +99,37 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'master', 'Yarn Description', 'yarn-descriptions');
       
+      Menus.addSubMenuItem('topbar', 'master', 'Item Master', 'item-masters');
+      
+      Menus.addSubMenuItem('topbar', 'master', 'Fabric Iitem Masters', 'fabric-item-masters');
+      
     
-      Menus.addMenuItem('topbar', 'Needles', 'needles', 'dropdown');
+      Menus.addMenuItem('topbar', 'Reports', 'reports', 'dropdown');
       
-      Menus.addSubMenuItem('topbar', 'needles', 'Bulk Needle Change Entry', 'bulk-needle-change-entries');
+      Menus.addSubMenuItem('topbar', 'reports', 'Fabric Sales Register', 'fabric-sale-registers');
       
-      Menus.addSubMenuItem('topbar', 'needles', 'Bulk Needle Change Report', 'bulk-needle-change-reports');
+      Menus.addSubMenuItem('topbar', 'reports', 'Fabric Stock Report', 'fabric-stock-reports');
       
-      Menus.addSubMenuItem('topbar', 'needles', 'Needles Breakage', 'needles-breakages');
+      Menus.addSubMenuItem('topbar', 'reports', 'Fabric Transfer Register', 'fabric-transfer-registers');
       
-      Menus.addSubMenuItem('topbar', 'needles', 'Needles Inward Entry', 'needles-inward-entries');
+      Menus.addSubMenuItem('topbar', 'reports', 'General Invoice Register', 'general-invoice-registers');
       
-      Menus.addSubMenuItem('topbar', 'needles', 'Needles Inward Register', 'needles-inward-registers');
+      Menus.addSubMenuItem('topbar', 'reports', 'General Item Outstanding Register', 'general-item-outstanding-registers');
+      
+      Menus.addSubMenuItem('topbar', 'reports', 'General Item Outward Register', 'general-item-outward-registers');
+      
+      Menus.addSubMenuItem('topbar', 'reports', 'Bulk Needle Change Report', 'bulk-needle-change-reports');
+      
+      Menus.addSubMenuItem('topbar', 'reports', 'Needles Inward Register', 'needles-inward-registers');
+      
+      Menus.addSubMenuItem('topbar', 'reports', 'Production Report', 'production-reports');
 
-      
+
       Menus.addMenuItem('topbar', 'Wages', 'wages', 'dropdown');
       
       Menus.addSubMenuItem('topbar', 'wages', 'Allowance Entry', 'allowance-entries');
       
       Menus.addSubMenuItem('topbar', 'wages', 'Deduction Entry', 'deduction-entries');
-      
-      Menus.addSubMenuItem('topbar', 'wages', 'Form Jj', 'form-jjs');
-      
-      Menus.addSubMenuItem('topbar', 'wages', 'Order Enquiry', 'order-enquiries');
       
       Menus.addSubMenuItem('topbar', 'wages', 'Shift Entry', 'shift-entries');
       
@@ -169,13 +159,15 @@ angular.module('core').run(['Menus',
       
       Menus.addSubMenuItem('topbar', 'production', 'Production Remarks Entry', 'production-remarks-entries');
       
-      Menus.addSubMenuItem('topbar', 'production', 'Production Report', 'production-reports');
-      
       Menus.addSubMenuItem('topbar', 'production', 'Production Test Entry', 'production-test-entries');
       
       Menus.addSubMenuItem('topbar', 'production', 'Roll Quality Control Entry', 'roll-quality-control-entries');
       
       Menus.addSubMenuItem('topbar', 'production', 'Rollwise Entry', 'rollwise-entries');
+      
+      Menus.addSubMenuItem('topbar', 'production', 'Order Enquiry', 'order-enquiries');
+      
+      Menus.addSubMenuItem('topbar', 'production', 'Form Jj', 'form-jjs');       
     
 	}
 ]);

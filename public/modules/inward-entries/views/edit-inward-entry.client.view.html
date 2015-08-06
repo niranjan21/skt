@@ -1,7 +1,7 @@
 <section data-ng-controller="InwardEntriesController" data-ng-init="findOne()">
   <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-12">
-      <h2>Modify Inward Entry</h2>
+      <h2>Modify Item Inward Entry</h2>
         <ol class="breadcrumb">
           <li>
             <a href="#!/">Home</a>
@@ -10,7 +10,7 @@
             <a href="#!/inward-entries">InwardEntry</a>
           </li>
           <li class="active">
-            <strong>Modify Inward Entry</strong>
+            <strong>Modify Item Inward Entry</strong>
           </li> 
         </ol>            
     </div>
@@ -30,23 +30,23 @@
               </div>    
             
               <div class="col-md-3 form-group">
-                <label class="control-label" for="goodsReceiptNo">Goods Receipt No</label>
+                <label class="control-label" for="grnno">Grnno</label>
                 <div class="controls">
-                  <input type="Number" data-ng-model="inwardentry.goodsReceiptNo" id="goodsReceiptNo" class="form-control" placeholder="" required />
+                  <input type="Text" data-ng-model="inwardentry.grnno" id="grnno" class="form-control" placeholder="" required />
                 </div>
               </div>    
             
               <div class="col-md-3 form-group">
-                <label class="control-label" for="inwardDate">Inward Date</label>
+                <label class="control-label" for="date">Date</label>
                 <div class="controls">
-                  <input type="Date" data-ng-model="inwardentry.inwardDate" id="inwardDate" class="form-control" placeholder="" required />
+                  <input type="Date" data-ng-model="inwardentry.date" id="date" class="form-control" placeholder="" required />
                 </div>
               </div>    
             
               <div class="col-md-3 form-group">
-                <label class="control-label" for="deliveryChalanNo">Delivery Chalan No</label>
+                <label class="control-label" for="deliveryChallanNo">Delivery Challan No</label>
                 <div class="controls">
-                  <input type="Number" data-ng-model="inwardentry.deliveryChalanNo" id="deliveryChalanNo" class="form-control" placeholder="" required />
+                  <input type="Text" data-ng-model="inwardentry.deliveryChallanNo" id="deliveryChallanNo" class="form-control" placeholder="" required />
                 </div>
               </div>    
             
@@ -58,16 +58,16 @@
               </div>    
             
               <div class="col-md-3 form-group">
-                <label class="control-label" for="nameOfTheItem">Name Of The Item</label>
+                <label class="control-label" for="nameoftheItem">Nameofthe Item</label>
                 <div class="controls">
-                  <input type="Text" data-ng-model="inwardentry.nameOfTheItem" id="nameOfTheItem" class="form-control" placeholder="" required />
+                  <input type="Text" data-ng-model="inwardentry.nameoftheItem" id="nameoftheItem" class="form-control" placeholder="" required />
                 </div>
               </div>    
             
               <div class="col-md-3 form-group">
-                <label class="control-label" for="uOM">U Om</label>
+                <label class="control-label" for="uom">Uom</label>
                 <div class="controls">
-                  <input type="Number" data-ng-model="inwardentry.uOM" id="uOM" class="form-control" placeholder="" required />
+                  <input type="Number" data-ng-model="inwardentry.uom" id="uom" class="form-control" placeholder="" required />
                 </div>
               </div>    
             
@@ -88,7 +88,7 @@
               <div class="col-md-3 form-group">
                 <label class="control-label" for="jobNo">Job No</label>
                 <div class="controls">
-                  <input type="Number" data-ng-model="inwardentry.jobNo" id="jobNo" class="form-control" placeholder="" required />
+                  <input type="Text" data-ng-model="inwardentry.jobNo" id="jobNo" class="form-control" placeholder="" required />
                 </div>
               </div>    
             
